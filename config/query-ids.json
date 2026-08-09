@@ -1,0 +1,37 @@
+{
+  "chain": "robinhood",
+  "queries": {
+    "discover": {
+      "id": 8269896,
+      "name": "RH Meme Scanner · Q-DISCOVER",
+      "file": "dune/q-discover.sql",
+      "description": "Top 30 RH chain tokens by 24h DEX volume"
+    },
+    "reactivate": {
+      "id": 8269903,
+      "name": "RH Meme Scanner · Q-REACTIVATE",
+      "file": "dune/q-reactivate.sql",
+      "description": "Old-token reactivation signals (vol accel, net-buy streak)"
+    },
+    "flow": {
+      "id": 8269897,
+      "name": "RH Meme Scanner · Q-FLOW",
+      "file": "dune/q-flow.sql",
+      "description": "Size-bucket flow + repeat buyer quality (48h)"
+    },
+    "watch": {
+      "id": 8269904,
+      "name": "RH Meme Scanner · Q-WATCH",
+      "file": "dune/q-watch.sql",
+      "description": "Watchlist deep dive (parameterized addresses)",
+      "parameters": {
+        "watchlist": "0x020bfC650A365f8BB26819deAAbF3E21291018b4"
+      }
+    }
+  },
+  "legacy_queries": {
+    "cashcat_concentration": 7918510,
+    "cashcat_new_holders": 7971066,
+    "cashcat_lp": 7918506
+  }
+}
