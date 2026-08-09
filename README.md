@@ -1,45 +1,52 @@
-# RH Meme Scanner
+# meme-scanner
 
-Daily on-chain scanner for **Robinhood Chain** memecoins — discovery, reactivation scoring, and Slack digest via Cursor Automation + Dune.
+Multi-chain on-chain meme scanner with **pluggable connectors** — built for edge in reactivation detection, absorption quality, and cross-chain regime rotation.
 
-## What it does
+**Chains:** Robinhood L2 · Solana  
+**Delivery:** Cursor Automation → Dune MCP → Slack digest  
+**Future:** Coinglass (perp OI/funding modifiers)
 
-1. **Discover** top tokens by 24h DEX volume (Q-DISCOVER)
-2. **Score** new coins and **reactivations** (CASHCAT Aug 3–5 pattern) (Q-REACTIVATE, Q-FLOW)
-3. **Watch** pinned tokens like CASHCAT (Q-WATCH)
-4. **Deliver** daily digest to Slack via Cursor Cloud Agent
+## Why this exists
+
+Most scanners alert on new deploys. The highest-conviction moves — like CASHCAT Aug 3–5 before the Aug 6 listing blowup — are **reactivations** of older tokens. This system codifies that pattern across chains.
+
+See [core/scoring/EDGE.md](core/scoring/EDGE.md) for the full edge thesis.
 
 ## Quick start
 
 ```bash
-# 1. Clone
-git clone https://github.com/sjvr33/rh-meme-scanner.git
-cd rh-meme-scanner
-
-# 2. Verify Dune query IDs in config/query-ids.json
-
-# 3. Set up Cursor Automation — see docs/AUTOMATION.md
+git clone https://github.com/sjvr33/meme-scanner.git
+cd meme-scanner
+# See docs/AUTOMATION.md for Cursor Automation setup
 ```
 
 ## Structure
 
 ```
-dune/           SQL for 4 saved Dune queries
-config/         Query IDs + watchlist
-docs/           Scoring rules + automation setup
-prompts/        Cursor Automation agent prompts
-.cursor/agents/ Optional custom subagents (when using repo checkout)
+core/           Manifest, MES scoring, connector registry
+chains/         Per-chain Dune SQL + config (robinhood, solana)
+prompts/        Automation agent instructions
+automation/     Cursor Automation prefill JSON
+docs/           Architecture + setup guides
 ```
 
-## Scoring
+## Dune queries
 
-See [docs/SCORING.md](docs/SCORING.md) for Meme Early Score (MES) — NEW vs REACTIVATION modes.
+| Chain | Discover | Reactivate | Flow | Watch |
+|-------|----------|------------|------|-------|
+| Robinhood | [8269896](https://dune.com/queries/8269896) | [8269903](https://dune.com/queries/8269903) | [8269897](https://dune.com/queries/8269897) | [8269904](https://dune.com/queries/8269904) |
+| Solana | see `chains/solana/config/query-ids.json` | | | |
 
-## Automation
+## Schedule
 
-See [docs/AUTOMATION.md](docs/AUTOMATION.md) for Cursor Automation setup (cron, MCP, Slack).
+Daily **06:00 UTC** (08:00 SAST) — multi-chain digest  
+Optional **06:30 UTC** — deep analyst pass
 
-**Schedule:** Daily 06:00 UTC (08:00 SAST)
+## Adding Coinglass (future)
+
+1. Set `enabled: true` in `core/connectors/coinglass.stub.json`
+2. Wire MCP/API
+3. Orchestrator Phase 2.5 auto-applies MES modifiers
 
 ## Disclaimer
 

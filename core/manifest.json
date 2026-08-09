@@ -1,0 +1,35 @@
+{
+  "name": "meme-scanner",
+  "version": "2.0.0",
+  "description": "Multi-chain on-chain meme scanner with pluggable data connectors",
+  "chains": ["robinhood", "solana"],
+  "connectors": {
+    "dune": {
+      "enabled": true,
+      "mcp_server_name": "dune",
+      "priority": 1,
+      "provides": ["discovery", "reactivation", "flow", "watch"]
+    },
+    "coinglass": {
+      "enabled": false,
+      "priority": 2,
+      "provides": ["perp_oi", "funding", "liquidations"],
+      "notes": "Stub — enable when MCP/API wired. Boosts MES for tokens with CEX perps."
+    }
+  },
+  "scoring": {
+    "engine": "MES",
+    "doc": "core/scoring/MES.md",
+    "edge_doc": "core/scoring/EDGE.md"
+  },
+  "automations": {
+    "daily_digest": {
+      "cron_utc": "0 6 * * *",
+      "prompt": "prompts/orchestrator-multichain.md"
+    },
+    "deep_analyst": {
+      "cron_utc": "30 6 * * *",
+      "prompt": "prompts/analyst.md"
+    }
+  }
+}

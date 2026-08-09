@@ -1,0 +1,14 @@
+{
+  "id": "robinhood",
+  "label": "Robinhood Chain",
+  "dune_blockchain": "robinhood",
+  "dex_table": "dex.trades",
+  "address_type": "evm",
+  "min_vol_24h_usd": 50000,
+  "excluded_symbols": ["WETH", "ETH", "USDG", "USDC", "USDT", "DAI", "WBTC"],
+  "config": {
+    "queries": "chains/robinhood/config/query-ids.json",
+    "watchlist": "chains/robinhood/config/watchlist.json"
+  },
+  "signals_doc": "chains/robinhood/signals.md"
+}

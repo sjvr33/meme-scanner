@@ -1,0 +1,25 @@
+{
+  "id": "coinglass",
+  "enabled": false,
+  "mcp_server_name": null,
+  "type": "modifier",
+  "notes": "Enable when Coinglass MCP or API is connected. Applies to tokens with CEX perp listings only.",
+  "signals": [
+    {
+      "id": "oi_spot_divergence",
+      "mes_modifier": 10,
+      "rule": "Perp OI +15% 24h AND on-chain net-buy positive → +10 MES (squeeze candidate)"
+    },
+    {
+      "id": "extreme_funding_absorption",
+      "mes_modifier": 10,
+      "rule": "Funding < -0.05% AND retail bucket net-buy → +10 MES (crowded short)"
+    },
+    {
+      "id": "oi_flush_capulation",
+      "mes_modifier": -15,
+      "rule": "OI -20% AND net sell day → -15 MES (long flush, avoid)"
+    }
+  ],
+  "max_total_modifier": 20
+}

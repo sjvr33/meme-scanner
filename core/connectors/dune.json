@@ -1,0 +1,20 @@
+{
+  "id": "dune",
+  "enabled": true,
+  "mcp_server_name": "dune",
+  "type": "primary",
+  "chains": {
+    "robinhood": {
+      "queries_config": "chains/robinhood/config/query-ids.json",
+      "sql_dir": "chains/robinhood/dune"
+    },
+    "solana": {
+      "queries_config": "chains/solana/config/query-ids.json",
+      "sql_dir": "chains/solana/dune"
+    }
+  },
+  "execution": {
+    "method": "executeQueryById",
+    "performance": "medium"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "solana",
+  "label": "Solana",
+  "dune_blockchain": "solana",
+  "dex_table": "dex_solana.trades",
+  "address_type": "mint",
+  "min_vol_24h_usd": 250000,
+  "excluded_symbols": ["SOL", "WSOL", "USDC", "USDT", "USD1", "USDG", "JupUSD", "WETH", "cbBTC", "mSOL", "JitoSOL"],
+  "excluded_mints": [
+    "So11111111111111111111111111111111111111112",
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+  ],
+  "config": {
+    "queries": "chains/solana/config/query-ids.json",
+    "watchlist": "chains/solana/config/watchlist.json"
+  },
+  "signals_doc": "chains/solana/signals.md"
+}
