@@ -58,3 +58,48 @@ HIGH CONVICTION only if MES ≥ 60 AND RX ≥ 80
 WATCHLIST if MES ≥ 60 AND RX 65–79
 DOWNRANK if MES high but RX < 65  → treat as distribution risk
 ```
+
+---
+
+## Expanded sample — other runners (Jul–Aug 2026)
+
+Queries: RH multi `8271384` · SOL multi `8271387`  
+Window: 5 days before peak → 1 day after. Peak = max daily vol day.
+
+### Robinhood — would RX have caught it?
+
+| Token | Peak day | Peak vol | Best RX **before** peak | Verdict |
+|-------|----------|----------|-------------------------|---------|
+| **FRONG** | Aug 5 | $24M | **81 IGNITION** on Jul 31 (−5d), **92** on Aug 4 (−1d) | ✅ **Caught early** |
+| **CASHCAT** | Aug 6 | $107M | **100 IGNITION** on Aug 5 (−1d); WARMING Aug 2–4 | ✅ **Caught** (best signal day-before) |
+| **VLAD** | Jul 23 | $28M | No pre-history in window; **80** on peak day | ⚠️ Flash — only same-day |
+| **VIRTUAL** | Jul 17 | $38M | Max **73 WARMING** (−3d); never IGNITION | 🟡 Watchlist only (sticky, no FOMO ladder) |
+| **GME** | Jul 23 | $31M | Max **60 MIXED** day-before; IGNITION day-after | ❌ Missed pre-peak (sudden Jul 22 launch) |
+| **PIPEDOG** | Jul 29 | $59M | Max **68 WARMING** on peak; absorption 0.16–0.43 | ❌ No IGNITION — whales dominating buys |
+
+**RH catch rate (IGNITION before peak):** 2/6 strong early (FRONG, CASHCAT).  
+**Useful non-catch:** PIPEDOG — RX refused IGNITION because absorption was broken (whale-led). That’s *correct* microstructure skepticism.
+
+### Solana — mostly distribution into volume
+
+| Token | Peak day | Peak vol | Best RX before/on peak | Verdict |
+|-------|----------|----------|------------------------|---------|
+| **CATE** | Aug 3 | $79M | 63 MIXED → 70 WARMING on peak; net −$24M peak day | ✅ Correctly refused IGNITION |
+| **ANSEM** | Jul 10 | $59M | Stuck 35–65; continuous net sell | ✅ Refused |
+| **Jimothy** | Jul 23 | $39M | 55 MIXED → 65 WARMING; net −$9M peak | ✅ Refused |
+| **Doom** | Aug 4 | $15M | 60 MIXED → 45 COLD on peak | ✅ Refused |
+| **HOUSEM** | Jul 17 | $14M | 36 COLD flash | ✅ Refused |
+| **bulltom** | Jul 28 | $17M | 28–35 COLD | ✅ Refused |
+
+**SOL insight:** Last month’s loud Solana “runs” in this sample were **volume with persistent net selling**. RX’s job is to *not* alert those. Edge here is **false-positive rejection**, not early catch of SOL blowups.
+
+### What this means for the scanner
+
+1. **Best fit:** RH multi-day reloads with retail absorbing (FRONG, CASHCAT) — RX lights **1–5 days early**.
+2. **Hard miss:** Same-day flash launches (GME, VLAD) with no prior tape — need faster cadence (hourly) or NEW-mode MES, not daily RX alone.
+3. **Correct skip:** Whale-dominated pumps (PIPEDOG) and Solana distribution spikes — RX stays MIXED/COLD.
+4. **Operational rule:** Treat IGNITION as rare. Prefer 1–3 true setups over chasing every vol spike.
+
+### Caveat on first-time buyer counts
+
+Multi-token backtests compute “first trade” inside a long lookback, so reload days show fewer first-timers than a short window. Production Q-REFLEX uses a 3-day lookback (closer to the original CASHCAT suite). Prefer production query IDs for live scoring.
