@@ -96,9 +96,44 @@ Window: 5 days before peak → 1 day after. Peak = max daily vol day.
 ### What this means for the scanner
 
 1. **Best fit:** RH multi-day reloads with retail absorbing (FRONG, CASHCAT) — RX lights **1–5 days early**.
-2. **Hard miss:** Same-day flash launches (GME, VLAD) with no prior tape — need faster cadence (hourly) or NEW-mode MES, not daily RX alone.
+2. **Hard miss for daily RX:** Same-day flash launches (GME, VLAD) — fixed by **Q-FLASH** (below).
 3. **Correct skip:** Whale-dominated pumps (PIPEDOG) and Solana distribution spikes — RX stays MIXED/COLD.
 4. **Operational rule:** Treat IGNITION as rare. Prefer 1–3 true setups over chasing every vol spike.
+
+---
+
+## Alternative lenses (v2.2) — looking at the chain differently
+
+We were over-indexing on **daily DEX aggregates**. These lenses use time resolution and wallet graph instead.
+
+### Q-FLASH — hourly (fixes GME miss)
+
+| Token | Daily RX | Hourly FLASH | Verdict |
+|-------|----------|--------------|---------|
+| **GME** | Missed pre-peak (max 60 day-before) | **FLASH_HOT Jul 22 21:00** ($2.77M, absorp 13.8, 175 buyers) — day before peak | ✅ Flash path catches it |
+| **VLAD** | Only peak-day RX 80 | FLASH_HOT Jul 23 17:00 (peak day) | ⚠️ Same-day only, but intraday usable |
+| **CASHCAT / FRONG** | Already caught by daily RX | Many FLASH_HOT hours during reload | Confirms; RX remains primary for reloads |
+
+Queries: backtest `8271448` / `8271460` · production RH **8271470** · SOL **8271473**
+
+### Q-COHORT — winner wallets (FRONG → CASHCAT forward)
+
+Cohort = net-long FRONG Jul 30–31. Measured on CASHCAT Aug 1–6 vs VIRTUAL-active control:
+
+| Day | FRONG-winner buy % of CASHCAT | VIRTUAL control trader % |
+|-----|-------------------------------|--------------------------|
+| Aug 2 | **16.8%** | 11.7% |
+| Aug 3 | 12.3% | 6.8% |
+| Aug 4 | **16.4%** | 5.0% |
+| Aug 5 | **16.9%** | 3.8% |
+
+FRONG winners punched ~2× trader share in buy USD into the reload; control collapsed. Production RH **8271471**.
+
+### Explored, not shipped
+
+- **Inverted low-vol FOMO** — too much launch spam (99% first-buyer days)
+- **Sell-A→buy-B rotation** — real overlap (169 CASHCAT→FRONG wallets) but USD math double-counts; needs cleaner graph
+- **pump.fun migrate** — next SOL-specific layer (`pump_call_migrate*`)
 
 ### Caveat on first-time buyer counts
 

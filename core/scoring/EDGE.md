@@ -8,9 +8,9 @@ Research framework. Not financial advice.
 
 This scanner is built around that asymmetry.
 
-## Five edge layers
+## Edge layers
 
-### Layer 1 — Reflexivity microstructure (Dune, live) ★ PRIMARY ALPHA
+### Layer 1 — Reflexivity microstructure (Dune, live) ★ PRIMARY (reloads)
 
 **Q-REFLEX** scores the transaction ladder that precedes parabolic runs:
 
@@ -24,7 +24,19 @@ This scanner is built around that asymmetry.
 
 **Validated:** CASHCAT scored RX 82→83→100 on Aug 3–5 *before* the Aug 6 blowup. Aug 6 ($107M vol dump) scored only 70. TOAD ($37M dump) scored 60 MIXED. See `docs/BACKTESTS.md` and `core/scoring/REFLEX.md`.
 
-### Layer 1b — Flow quality (Q-FLOW)
+### Layer 1b — Hourly FLASH (Dune, live) ★ PRIMARY (flashes)
+
+Daily RX is too slow for same-day launches. **Q-FLASH** scores the last 12h hourly.
+
+**Validated:** GME printed **FLASH_HOT at Jul 22 21:00** — day before peak Jul 23 — which daily RX missed. See `core/scoring/FLASH.md`.
+
+### Layer 1c — Winner COHORT (Dune, live) ★ CONFIRMATION
+
+**Q-COHORT** measures whether wallets that won recent RH memes are buying today's candidates.
+
+**Validated:** FRONG Jul 30–31 winners supplied **~15–17% of CASHCAT buy USD** on Aug 2–5 while a VIRTUAL control cohort collapsed. See `core/scoring/FLASH.md`.
+
+### Layer 1d — Flow quality (Q-FLOW)
 
 | Signal | Why it matters |
 |--------|----------------|

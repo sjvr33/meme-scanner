@@ -5,6 +5,7 @@
     "reactivate": { "id": 8271226, "file": "chains/solana/dune/q-reactivate.sql" },
     "flow": { "id": 8271228, "file": "chains/solana/dune/q-flow.sql" },
     "reflex": { "id": 8271349, "file": "chains/solana/dune/q-reflex.sql", "description": "Microstructure Reflex Score (RX)" },
+    "flash": { "id": 8271473, "file": "chains/solana/dune/q-flash.sql", "description": "Hourly FLASH score — catches same-day launches" },
     "watch": {
       "id": 8271229,
       "file": "chains/solana/dune/q-watch.sql",
@@ -16,6 +17,7 @@
     "reactivate": "https://dune.com/queries/8271226",
     "flow": "https://dune.com/queries/8271228",
     "reflex": "https://dune.com/queries/8271349",
+    "flash": "https://dune.com/queries/8271473",
     "watch": "https://dune.com/queries/8271229"
   }
 }

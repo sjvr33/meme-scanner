@@ -5,6 +5,8 @@
     "reactivate": { "id": 8269903, "file": "chains/robinhood/dune/q-reactivate.sql" },
     "flow": { "id": 8269897, "file": "chains/robinhood/dune/q-flow.sql" },
     "reflex": { "id": 8271348, "file": "chains/robinhood/dune/q-reflex.sql", "description": "Microstructure Reflex Score (RX)" },
+    "flash": { "id": 8271470, "file": "chains/robinhood/dune/q-flash.sql", "description": "Hourly FLASH score — catches same-day launches" },
+    "cohort": { "id": 8271471, "file": "chains/robinhood/dune/q-cohort.sql", "description": "Winner-wallet overlap into candidates" },
     "watch": {
       "id": 8269904,
       "file": "chains/robinhood/dune/q-watch.sql",
@@ -16,6 +18,8 @@
     "reactivate": "https://dune.com/queries/8269903",
     "flow": "https://dune.com/queries/8269897",
     "reflex": "https://dune.com/queries/8271348",
+    "flash": "https://dune.com/queries/8271470",
+    "cohort": "https://dune.com/queries/8271471",
     "watch": "https://dune.com/queries/8269904"
   },
   "legacy_queries": {

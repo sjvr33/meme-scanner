@@ -18,12 +18,10 @@ Prefill JSON: `automation/scanner-multichain-prefill.json`
 
 ## Query IDs
 
-| Chain | Discover | Reactivate | Flow | Watch |
-|-------|----------|------------|------|-------|
-| Robinhood | 8269896 | 8269903 | 8269897 | 8269904 |
-| Solana | 8271224 | 8271226 | 8271228 | 8271229 |
-| Robinhood Reflex ★ | 8271348 | — | — | — |
-| Solana Reflex ★ | 8271349 | — | — | — |
+| Chain | Discover | Reactivate | Flow | Reflex | Flash | Cohort | Watch |
+|-------|----------|------------|------|--------|-------|--------|-------|
+| Robinhood | 8269896 | 8269903 | 8269897 | 8271348 | 8271470 | 8271471 | 8269904 |
+| Solana | 8271224 | 8271226 | 8271228 | 8271349 | 8271473 | — | 8271229 |
 
 Full config: `chains/<chain>/config/query-ids.json`
 
@@ -39,6 +37,10 @@ Set `enabled: true` in `core/connectors/coinglass.stub.json` when MCP wired.
 Orchestrator Phase 2.5 applies modifiers automatically.
 
 
-## Reflex Score (v2.1)
+## Alpha layers (v2.2)
 
-Primary alpha: execute **Q-REFLEX** (RH `8271348`, SOL `8271349`) every run. HIGH CONVICTION requires RX ≥ 80. See `core/scoring/REFLEX.md`.
+- **Q-REFLEX** (RH `8271348`, SOL `8271349`) — multi-day reloads
+- **Q-FLASH** (RH `8271470`, SOL `8271473`) — same-day launches
+- **Q-COHORT** (RH `8271471`) — winner-wallet confirmation
+
+Conviction paths in `core/scoring/FLASH.md`.

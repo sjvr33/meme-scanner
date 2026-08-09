@@ -17,6 +17,8 @@
     "method": "executeQueryById",
     "performance": "medium"
   },
-  "query_keys": ["discover", "reactivate", "flow", "reflex", "watch"],
-  "alpha_query": "reflex"
+  "query_keys": ["discover", "reactivate", "flow", "reflex", "flash", "cohort", "watch"],
+  "alpha_query": "reflex",
+  "flash_query": "flash",
+  "cohort_query": "cohort"
 }
