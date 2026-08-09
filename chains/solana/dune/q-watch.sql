@@ -1,7 +1,8 @@
 -- Q-WATCH: Solana watchlist deep dive (parameter: {{watchlist}} comma-separated mints)
 WITH watchlist AS (
+    -- Base58 mints must be string-quoted; CAST({{watchlist}} AS varchar) is treated as an identifier
     SELECT DISTINCT trim(addr) AS mint
-    FROM UNNEST(SPLIT(CAST({{watchlist}} AS varchar), ',')) AS t(addr)
+    FROM UNNEST(SPLIT('{{watchlist}}', ',')) AS t(addr)
     WHERE trim(addr) != ''
 ),
 trades AS (

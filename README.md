@@ -40,8 +40,8 @@ docs/           Architecture + setup guides
 
 ## Schedule
 
-Daily **06:00 UTC** (08:00 SAST) — multi-chain digest  
-Optional **06:30 UTC** — deep analyst pass
+**One** daily automation: **06:00 UTC** (08:00 SAST) — multi-chain Reflex + Flash + Cohort digest.  
+Setup: [docs/AUTOMATION.md](docs/AUTOMATION.md) · Prefill: `automation/scanner-multichain-prefill.json`
 
 ## Adding Coinglass (future)
 

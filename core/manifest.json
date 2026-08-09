@@ -27,12 +27,13 @@
   },
   "automations": {
     "daily_digest": {
+      "name": "Meme Scanner — Multi-Chain Reflex Digest",
       "cron_utc": "0 6 * * *",
-      "prompt": "prompts/orchestrator-multichain.md"
-    },
-    "deep_analyst": {
-      "cron_utc": "30 6 * * *",
-      "prompt": "prompts/analyst.md"
+      "cron_sast": "08:00",
+      "prompt": "prompts/orchestrator-multichain.md",
+      "prefill": "automation/scanner-multichain-prefill.json",
+      "repo": "sjvr33/meme-scanner",
+      "branch": "main"
     }
   }
 }
