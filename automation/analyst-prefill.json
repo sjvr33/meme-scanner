@@ -1,0 +1,35 @@
+{
+  "name": "RH Meme Scanner — Deep Analyst",
+  "description": "Deep dive on top 3 MES candidates. Runs 30 min after daily scanner at 08:30 SAST.",
+  "workflow": {
+    "triggers": [
+      {
+        "cron": {
+          "cron": "30 6 * * *"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "mcp": {
+          "server": {
+            "name": "dune"
+          }
+        }
+      },
+      {
+        "slack": {}
+      }
+    ],
+    "prompts": [
+      {
+        "prompt": "You are the RH Meme Deep Analyst. Read @config/query-ids.json and @docs/SCORING.md.\n\nUse Memories from the morning Scanner run, OR re-execute Q-REACTIVATE (8269903) + Q-FLOW (8269897) and pick top 3 by MES.\n\nFor each top 3 token:\n1. 7-day vol/net/holders table\n2. Retail vs whale absorption (Q-FLOW buckets)\n3. Would this match CASHCAT Aug 3-5 pattern? yes/no + signals\n4. Entry/add/kill levels (data-derived)\n5. Verdict: STARTER / WAIT / SKIP\n\nPost ONE Slack deep-dive message. Research only. Include contract addresses."
+      }
+    ],
+    "memoryEnabled": true,
+    "gitConfig": {
+      "repo": "sjvr33/rh-meme-scanner",
+      "branch": "main"
+    }
+  }
+}

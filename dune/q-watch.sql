@@ -2,9 +2,9 @@
 -- Parameter: watchlist addresses (comma-separated 0x... in {{watchlist}})
 
 WITH watchlist AS (
-    SELECT DISTINCT CAST(TRIM(addr) AS varbinary) AS token_address
+    SELECT DISTINCT from_hex(replace(lower(trim(addr)), '0x', '')) AS token_address
     FROM UNNEST(SPLIT(CAST({{watchlist}} AS varchar), ',')) AS t(addr)
-    WHERE TRIM(addr) != ''
+    WHERE trim(addr) != ''
 ),
 trades AS (
     SELECT
