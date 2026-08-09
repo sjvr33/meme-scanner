@@ -1,7 +1,12 @@
 -- Q-FLOW: Size-bucket flow + repeat buyer quality for top RH chain tokens (last 48h)
 -- Focuses on tokens with meaningful 24h volume
 
-WITH top_tokens AS (
+WITH excluded AS (
+    SELECT contract_address FROM tokens.erc20
+    WHERE blockchain = 'robinhood'
+      AND symbol IN ('WETH', 'ETH', 'USDG', 'USDC', 'USDT', 'DAI', 'WBTC')
+),
+top_tokens AS (
     SELECT token_address FROM (
         SELECT
             CASE
@@ -18,7 +23,9 @@ WITH top_tokens AS (
         HAVING SUM(amount_usd) >= 100000
         ORDER BY 2 DESC
         LIMIT 15
-    )
+    ) t
+    WHERE token_address NOT IN (SELECT contract_address FROM excluded)
+      AND token_address != 0x0000000000000000000000000000000000000000
 ),
 trades AS (
     SELECT

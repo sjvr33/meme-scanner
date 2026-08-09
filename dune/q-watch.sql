@@ -3,7 +3,7 @@
 
 WITH watchlist AS (
     SELECT DISTINCT CAST(TRIM(addr) AS varbinary) AS token_address
-    FROM UNNEST(SPLIT({{watchlist}}, ',')) AS t(addr)
+    FROM UNNEST(SPLIT(CAST({{watchlist}} AS varchar), ',')) AS t(addr)
     WHERE TRIM(addr) != ''
 ),
 trades AS (
