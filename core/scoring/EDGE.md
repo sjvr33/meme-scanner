@@ -75,16 +75,24 @@ When a connector is enabled, it adds **modifier points** to MES — never replac
 |-----------|--------------|
 | Coinglass | Perp OI rising + spot net-buy = squeeze setup (+10 MES) |
 | Coinglass | Extreme negative funding + absorption = crowded short (+10) |
-| Social (future) | Narrative confirmation only — never primary signal |
 
 Connectors plug in via `core/connectors/*.json` — see README there.
+
+### Layer 6 — Narrative / table read (required in digest)
+
+After scores, run identity + web/social skim per @core/scoring/TABLE.md.
+
+- Narrative **confirms or downgrades** — never upgrades a failed RX/FLASH gate to TAKE
+- Congruence: absorption + early/quiet story → asymmetric; net-sell + loud hype → FADE
+- Slack must ship TAKE / WATCH / FADE with opponent model — not a scoreboard
 
 ## What we deliberately ignore
 
 - Raw "new token" alerts without volume/trader filters (noise)
 - Single-day parabolic without absorption (distribution trap)
-- Social sentiment as primary signal (lagging, gamed)
-- Financial advice or sizing — data-driven watchlist only
+- Social sentiment as **primary** signal (lagging, gamed) — secondary congruence only
+- Financial advice or sizing — research watchlist only
+- Spreadsheet digests with no thesis
 
 ## Solana-specific edge
 

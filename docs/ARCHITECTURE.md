@@ -32,7 +32,7 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 | Path | Purpose |
 |------|---------|
 | `core/manifest.json` | Registry: chains, connectors, **one** automation |
-| `core/scoring/` | MES, REFLEX, FLASH, EDGE |
+| `core/scoring/` | MES, REFLEX, FLASH, EDGE, TABLE |
 | `core/connectors/` | Pluggable data source configs |
 | `chains/<id>/dune/` | Chain-specific SQL |
 | `chains/<id>/config/` | Query IDs, watchlist |
@@ -47,8 +47,9 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 4. **Flash** — hourly (same-day launch path)
 5. **Cohort** — winner-wallet overlap (RH confirmation)
 6. **Watch** — pinned + carry-forward
-7. **Regime** — cross-chain rotation
-8. **Deliver** — Slack + Memories
+7. **Identity + narrative** — resolve names; web/social congruence (TABLE.md)
+8. **Table read** — cross-chain regime in prose
+9. **Deliver** — Slack TAKE/WATCH/FADE + Memories
 
 ## Adding a new chain
 

@@ -18,8 +18,10 @@ Do this once in Cursor Automations UI (prefill opens via agent or paste JSON):
 3. **Slack** = your DM or `#meme-scanner` (required — prefill cannot pick the channel)
 4. **Memories** = on
 5. **Cron** = `0 6 * * *` (08:00 SAST)
-6. **Save** → **Run once** manually → confirm Slack message has both RH + SOL sections
+6. **Save** → **Run once** manually → confirm Slack is a **Table Read** (TABLE / PLAYS / PASSES), not a score spreadsheet
 7. Enable Slack mobile notifications if you want push
+
+Quality bar for a good run: each PLAY has On-chain + Narrative + Opponent + Kill + TAKE|WATCH. See `core/scoring/TABLE.md`.
 
 If an old automation named `RH Meme Scanner — Daily Digest` or `RH Meme Scanner — Deep Analyst` still exists in Cursor, **delete it** — those point at the retired `rh-meme-scanner` repo / old prompts.
 
@@ -32,13 +34,14 @@ If an old automation named `RH Meme Scanner — Daily Digest` or `RH Meme Scanne
 
 Config source of truth: `chains/<chain>/config/query-ids.json`
 
-## Alpha layers (v2.2)
+## Alpha layers (v2.3)
 
 - **Q-REFLEX** — multi-day reloads (`core/scoring/REFLEX.md`)
 - **Q-FLASH** — same-day launches (`core/scoring/FLASH.md`)
 - **Q-COHORT** — winner-wallet confirmation (RH)
+- **TABLE** — narrative/web congruence + TAKE/WATCH/FADE voice (`core/scoring/TABLE.md`)
 
-HIGH CONVICTION paths in `core/scoring/FLASH.md`.
+HIGH CONVICTION paths in `core/scoring/FLASH.md`. Narrative never upgrades a failed on-chain gate.
 
 ## Optional: deep dive
 
