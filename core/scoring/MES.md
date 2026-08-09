@@ -1,13 +1,16 @@
-# Meme Early Score (MES) — Robinhood Chain
+# Meme Early Score (MES)
 
 Research framework for the daily scanner. Not financial advice.
+
+**Pair with Reflex Score (RX)** — see `core/scoring/REFLEX.md`.  
+MES = macro attention/demand. RX = microstructure ladder before parabolic.
 
 ## Two modes
 
 | Mode | Age | Pattern |
 |------|-----|---------|
-| **NEW** | < 14 days | Early deploy, first LP, holder velocity |
-| **REACTIVATION** | ≥ 14 days | CASHCAT Aug 3–5 template — old coin reloading |
+| **NEW** | < chain threshold | Early deploy, first LP, holder velocity |
+| **REACTIVATION** | ≥ 14d RH / ≥ 7d SOL | CASHCAT Aug 3–5 template — old coin reloading |
 
 ## REACTIVATION scoring (0–100)
 
@@ -33,14 +36,16 @@ Research framework for the daily scanner. Not financial advice.
 | Dispersion proxy | +15 | Not dominated by top-1 wallet in flow |
 | LP exists | +15 | Has DEX trades (implicit) |
 
-## Verdict thresholds
+## Verdict thresholds (MES × RX gate)
 
-| MES | Label | Action in digest |
-|-----|-------|------------------|
-| ≥ 75 | HIGH CONVICTION | Top section |
-| 60–74 | WATCHLIST | Monitor |
-| 45–59 | LOW | Mention only if on prior watchlist |
-| < 45 | SKIP | Omit (graduate out after 3 days) |
+| MES | RX | Final label | Action |
+|-----|-----|-------------|--------|
+| ≥ 60 | ≥ 80 | **HIGH CONVICTION (IGNITION)** | Top section |
+| ≥ 60 | 65–79 | **WATCHLIST (WARMING)** | Monitor |
+| ≥ 75 | < 65 | **MIXED / DISTRIBUTION RISK** | Downrank — do not chase vol |
+| < 60 | any | SKIP (unless watched) | Omit |
+
+Never alert IGNITION on volume alone. RX is the alpha gate.
 
 ## Watchlist verdicts (Q-WATCH)
 

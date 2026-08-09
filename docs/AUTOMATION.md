@@ -22,6 +22,8 @@ Prefill JSON: `automation/scanner-multichain-prefill.json`
 |-------|----------|------------|------|-------|
 | Robinhood | 8269896 | 8269903 | 8269897 | 8269904 |
 | Solana | 8271224 | 8271226 | 8271228 | 8271229 |
+| Robinhood Reflex ★ | 8271348 | — | — | — |
+| Solana Reflex ★ | 8271349 | — | — | — |
 
 Full config: `chains/<chain>/config/query-ids.json`
 
@@ -35,3 +37,8 @@ Full config: `chains/<chain>/config/query-ids.json`
 
 Set `enabled: true` in `core/connectors/coinglass.stub.json` when MCP wired.
 Orchestrator Phase 2.5 applies modifiers automatically.
+
+
+## Reflex Score (v2.1)
+
+Primary alpha: execute **Q-REFLEX** (RH `8271348`, SOL `8271349`) every run. HIGH CONVICTION requires RX ≥ 80. See `core/scoring/REFLEX.md`.

@@ -10,18 +10,27 @@ This scanner is built around that asymmetry.
 
 ## Five edge layers
 
-### Layer 1 — Behavioral absorption (Dune, live)
+### Layer 1 — Reflexivity microstructure (Dune, live) ★ PRIMARY ALPHA
 
-Score *who* is buying, not just that price went up:
+**Q-REFLEX** scores the transaction ladder that precedes parabolic runs:
+
+| Signal | Why it matters |
+|--------|----------------|
+| Absorption ratio | Retail buys / whale sells — floor construction |
+| First-time buyers | Fresh wallets entering (FOMO ladder) |
+| Add-on rate | Yesterday's buyers buying again, still net long |
+| Buy-burst share | Best 2h buys / day buys — ignition window |
+| Net flow gate | Without net demand, vol = distribution |
+
+**Validated:** CASHCAT scored RX 82→83→100 on Aug 3–5 *before* the Aug 6 blowup. Aug 6 ($107M vol dump) scored only 70. TOAD ($37M dump) scored 60 MIXED. See `docs/BACKTESTS.md` and `core/scoring/REFLEX.md`.
+
+### Layer 1b — Flow quality (Q-FLOW)
 
 | Signal | Why it matters |
 |--------|----------------|
 | Repeat buyer % | Organic interest vs one-shot bots |
 | Net-buy wallet % | Breadth of demand |
-| Size buckets | Retail absorbing whale sells = floor |
-| Net-buy streak | Conviction before narrative |
-
-**Edge:** Most free tools show price/vol. Few score absorption quality daily.
+| Size buckets | Retail vs whale composition |
 
 ### Layer 2 — Reactivation mode (Dune, live)
 

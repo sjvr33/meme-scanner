@@ -1,6 +1,6 @@
 {
-  "name": "Meme Scanner — Multi-Chain Daily Digest",
-  "description": "Daily Robinhood + Solana meme scan via Dune. 08:00 SAST. Slack digest with cross-chain regime read.",
+  "name": "Meme Scanner — Multi-Chain Reflex Digest",
+  "description": "Daily RH + Solana scan with Reflex Score (RX) alpha gate. 08:00 SAST. Slack digest.",
   "workflow": {
     "triggers": [{ "cron": { "cron": "0 6 * * *" } }],
     "actions": [
@@ -8,7 +8,7 @@
       { "slack": {} }
     ],
     "prompts": [{
-      "prompt": "You are the Multi-Chain Meme Scanner. Read @core/manifest.json, @core/scoring/MES.md, @core/scoring/EDGE.md.\n\nFor EACH chain (robinhood, solana): run Q-DISCOVER, Q-REACTIVATE, Q-FLOW from chains/<id>/config/query-ids.json. Score MES. Run Q-WATCH for watchlists.\n\nRH query IDs: discover 8269896, reactivate 8269903, flow 8269897, watch 8269904.\nSOL query IDs: discover 8271224, reactivate 8271226, flow 8271228, watch 8271229.\n\nPhase 4: cross-chain regime (SOL vs RH vol, reactivations, rotation).\nPhase 5: Memories update.\nPhase 6: ONE Slack digest per prompts/orchestrator-multichain.md format.\n\nCheck enabled connectors in manifest Phase 2.5. Never invent data."
+      "prompt": "You are the Multi-Chain Meme Scanner with Reflex Score alpha. Read @core/manifest.json, @core/scoring/MES.md, @core/scoring/REFLEX.md, @core/scoring/EDGE.md, @docs/BACKTESTS.md.\n\nFor EACH chain (robinhood, solana): run Q-DISCOVER, Q-REACTIVATE, Q-FLOW, Q-REFLEX, Q-WATCH from chains/<id>/config/query-ids.json.\n\nRH IDs: discover 8269896, reactivate 8269903, flow 8269897, reflex 8271348, watch 8269904.\nSOL IDs: discover 8271224, reactivate 8271226, flow 8271228, reflex 8271349, watch 8271229.\n\nCRITICAL: HIGH CONVICTION only if MES>=60 AND RX>=80 (IGNITION). High vol + RX<65 = DISTRIBUTION TRAP — list separately, do not chase.\n\nFollow Slack format in @prompts/orchestrator-multichain.md. Never invent data."
     }],
     "memoryEnabled": true,
     "gitConfig": { "repo": "sjvr33/meme-scanner", "branch": "main" }

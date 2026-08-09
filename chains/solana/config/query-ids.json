@@ -1,33 +1,21 @@
 {
   "chain": "solana",
   "queries": {
-    "discover": {
-      "id": 8271224,
-      "file": "chains/solana/dune/q-discover.sql",
-      "description": "Top 30 Solana tokens by 24h DEX volume"
-    },
-    "reactivate": {
-      "id": 8271226,
-      "file": "chains/solana/dune/q-reactivate.sql",
-      "description": "Solana reactivation signals (age >= 7d)"
-    },
-    "flow": {
-      "id": 8271228,
-      "file": "chains/solana/dune/q-flow.sql",
-      "description": "Size-bucket flow + repeat buyer quality"
-    },
+    "discover": { "id": 8271224, "file": "chains/solana/dune/q-discover.sql" },
+    "reactivate": { "id": 8271226, "file": "chains/solana/dune/q-reactivate.sql" },
+    "flow": { "id": 8271228, "file": "chains/solana/dune/q-flow.sql" },
+    "reflex": { "id": 8271349, "file": "chains/solana/dune/q-reflex.sql", "description": "Microstructure Reflex Score (RX)" },
     "watch": {
       "id": 8271229,
       "file": "chains/solana/dune/q-watch.sql",
-      "parameters": {
-        "watchlist": "A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump"
-      }
+      "parameters": { "watchlist": "A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump" }
     }
   },
   "dune_urls": {
     "discover": "https://dune.com/queries/8271224",
     "reactivate": "https://dune.com/queries/8271226",
     "flow": "https://dune.com/queries/8271228",
+    "reflex": "https://dune.com/queries/8271349",
     "watch": "https://dune.com/queries/8271229"
   }
 }

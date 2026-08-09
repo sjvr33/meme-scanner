@@ -1,33 +1,21 @@
 {
   "chain": "robinhood",
   "queries": {
-    "discover": {
-      "id": 8269896,
-      "file": "chains/robinhood/dune/q-discover.sql",
-      "description": "Top 30 RH chain tokens by 24h DEX volume"
-    },
-    "reactivate": {
-      "id": 8269903,
-      "file": "chains/robinhood/dune/q-reactivate.sql",
-      "description": "Old-token reactivation signals"
-    },
-    "flow": {
-      "id": 8269897,
-      "file": "chains/robinhood/dune/q-flow.sql",
-      "description": "Size-bucket flow + repeat buyer quality"
-    },
+    "discover": { "id": 8269896, "file": "chains/robinhood/dune/q-discover.sql" },
+    "reactivate": { "id": 8269903, "file": "chains/robinhood/dune/q-reactivate.sql" },
+    "flow": { "id": 8269897, "file": "chains/robinhood/dune/q-flow.sql" },
+    "reflex": { "id": 8271348, "file": "chains/robinhood/dune/q-reflex.sql", "description": "Microstructure Reflex Score (RX)" },
     "watch": {
       "id": 8269904,
       "file": "chains/robinhood/dune/q-watch.sql",
-      "parameters": {
-        "watchlist": "0x020bfC650A365f8BB26819deAAbF3E21291018b4"
-      }
+      "parameters": { "watchlist": "0x020bfC650A365f8BB26819deAAbF3E21291018b4" }
     }
   },
   "dune_urls": {
     "discover": "https://dune.com/queries/8269896",
     "reactivate": "https://dune.com/queries/8269903",
     "flow": "https://dune.com/queries/8269897",
+    "reflex": "https://dune.com/queries/8271348",
     "watch": "https://dune.com/queries/8269904"
   },
   "legacy_queries": {

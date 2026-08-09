@@ -1,16 +1,17 @@
 # meme-scanner
 
-Multi-chain on-chain meme scanner with **pluggable connectors** — built for edge in reactivation detection, absorption quality, and cross-chain regime rotation.
+Multi-chain meme scanner with **Reflex Score (RX)** — microstructure alpha that detects pre-parabolic buyer ladders — plus pluggable connectors.
 
 **Chains:** Robinhood L2 · Solana  
 **Delivery:** Cursor Automation → Dune MCP → Slack digest  
+**Alpha:** Q-REFLEX (absorption · first-timers · add-ons · buy-burst · net gate)  
 **Future:** Coinglass (perp OI/funding modifiers)
 
 ## Why this exists
 
-Most scanners alert on new deploys. The highest-conviction moves — like CASHCAT Aug 3–5 before the Aug 6 listing blowup — are **reactivations** of older tokens. This system codifies that pattern across chains.
+Volume scanners scream loudest on dump days. CASHCAT's Aug 6 listing climax was $107M vol / net−$1.18M. The **real setup** was Aug 3–5 — when Reflex Score hit 82→83→100 *before* the blowup. TOAD's $37M Solana dump scored RX 60 (MIXED) and is correctly rejected.
 
-See [core/scoring/EDGE.md](core/scoring/EDGE.md) for the full edge thesis.
+See [core/scoring/REFLEX.md](core/scoring/REFLEX.md) · [docs/BACKTESTS.md](docs/BACKTESTS.md) · [core/scoring/EDGE.md](core/scoring/EDGE.md).
 
 ## Quick start
 
@@ -32,10 +33,10 @@ docs/           Architecture + setup guides
 
 ## Dune queries
 
-| Chain | Discover | Reactivate | Flow | Watch |
-|-------|----------|------------|------|-------|
-| Robinhood | [8269896](https://dune.com/queries/8269896) | [8269903](https://dune.com/queries/8269903) | [8269897](https://dune.com/queries/8269897) | [8269904](https://dune.com/queries/8269904) |
-| Solana | see `chains/solana/config/query-ids.json` | | | |
+| Chain | Discover | Reactivate | Flow | **Reflex ★** | Watch |
+|-------|----------|------------|------|-------------|-------|
+| Robinhood | [8269896](https://dune.com/queries/8269896) | [8269903](https://dune.com/queries/8269903) | [8269897](https://dune.com/queries/8269897) | [8271348](https://dune.com/queries/8271348) | [8269904](https://dune.com/queries/8269904) |
+| Solana | [8271224](https://dune.com/queries/8271224) | [8271226](https://dune.com/queries/8271226) | [8271228](https://dune.com/queries/8271228) | [8271349](https://dune.com/queries/8271349) | [8271229](https://dune.com/queries/8271229) |
 
 ## Schedule
 
