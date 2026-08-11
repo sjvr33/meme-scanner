@@ -1,0 +1,215 @@
+{
+  "date": "2026-08-11",
+  "chain": "robinhood",
+  "performance": "medium",
+  "queries": {
+    "Q-DISCOVER": {
+      "query_id": 8269896,
+      "execution_id": "01KZQPN850XFH4QEYQJB9HJ9RV",
+      "state": "COMPLETED",
+      "credits": "3.264",
+      "totalRowCount": 30,
+      "columns": ["token_address", "symbol", "name", "token_age_days", "first_trade_day", "vol_24h", "vol_7d", "net_24h", "traders_24h", "vol_rank_24h"],
+      "rows": [
+        {"token_address": "0x020bfc650a365f8bb26819deaabf3e21291018b4", "symbol": "CASHCAT", "name": "Cash Cat", "token_age_days": 30, "first_trade_day": "2026-07-12 00:00:00.000 UTC", "vol_24h": 24376190.367319513, "vol_7d": 248509449.729798, "net_24h": 807804.5630335403, "traders_24h": 4945, "vol_rank_24h": 1},
+        {"token_address": "0x76473aad1a39a4ad699822fc035321576a333743", "symbol": null, "name": null, "token_age_days": 2, "first_trade_day": "2026-08-09 00:00:00.000 UTC", "vol_24h": 13577877.138771437, "vol_7d": 16329346.553347774, "net_24h": -102435.55140419841, "traders_24h": 2236, "vol_rank_24h": 2},
+        {"token_address": "0x95d3bc5d467d448ac83c5b33ff90f4dcfaf4c1e4", "symbol": null, "name": null, "token_age_days": 2, "first_trade_day": "2026-08-09 00:00:00.000 UTC", "vol_24h": 12931654.652482234, "vol_7d": 13009728.16185916, "net_24h": 2581684.8132378967, "traders_24h": 795, "vol_rank_24h": 3},
+        {"token_address": "0xad2a703109863b53c4e294e9dfa8fe19d57c89f7", "symbol": null, "name": null, "token_age_days": 1, "first_trade_day": "2026-08-10 00:00:00.000 UTC", "vol_24h": 11590109.85849774, "vol_7d": 11590109.85849774, "net_24h": 46020.496668669024, "traders_24h": 2798, "vol_rank_24h": 4},
+        {"token_address": "0xe934e36a439c94017b64a3fece66af12099abf50", "symbol": "STONKBROKER", "name": "StonkBroker", "token_age_days": 24, "first_trade_day": "2026-07-18 00:00:00.000 UTC", "vol_24h": 9728352.528065206, "vol_7d": 42073254.164414756, "net_24h": 228523.0168541046, "traders_24h": 1224, "vol_rank_24h": 5},
+        {"token_address": "0x77b0aa38451ccdc1b42587e2f80b9879a7f82356", "symbol": null, "name": null, "token_age_days": 1, "first_trade_day": "2026-08-10 00:00:00.000 UTC", "vol_24h": 8495131.04489564, "vol_7d": 8495131.04489564, "net_24h": 5168.538531175464, "traders_24h": 635, "vol_rank_24h": 6},
+        {"token_address": "0x39dbed3a2bd333467115de45665cc57f813c4571", "symbol": "PONS", "name": "Pons", "token_age_days": 29, "first_trade_day": "2026-07-13 00:00:00.000 UTC", "vol_24h": 7128810.606582433, "vol_7d": 52987347.71017869, "net_24h": -9556.441259179264, "traders_24h": 1785, "vol_rank_24h": 7},
+        {"token_address": "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1", "symbol": "UP", "name": "up", "token_age_days": 30, "first_trade_day": "2026-07-12 00:00:00.000 UTC", "vol_24h": 6805757.902080948, "vol_7d": 7471380.976255104, "net_24h": 332920.3890590088, "traders_24h": 1268, "vol_rank_24h": 8},
+        {"token_address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea", "symbol": "SPCX", "name": "Space Exploration Technologies ", "token_age_days": 30, "first_trade_day": "2026-07-12 00:00:00.000 UTC", "vol_24h": 6395288.788639312, "vol_7d": 33764914.422638744, "net_24h": 96749.79307691107, "traders_24h": 467, "vol_rank_24h": 9},
+        {"token_address": "0x6245e67affa44a23077f0ea7f981a8dc743a0c47", "symbol": "FRONG", "name": "frong", "token_age_days": 12, "first_trade_day": "2026-07-30 00:00:00.000 UTC", "vol_24h": 3412307.6562120896, "vol_7d": 69378505.10783166, "net_24h": 15540.242347517982, "traders_24h": 1724, "vol_rank_24h": 10},
+        {"token_address": "0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31", "symbol": "VIRTUAL", "name": "Virtuals Protocol", "token_age_days": 30, "vol_24h": 3239875.9401400243, "vol_rank_24h": 11},
+        {"token_address": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec", "symbol": "NVDA", "name": "NVIDIA • Robinhood Token", "token_age_days": 30, "vol_24h": 3225116.6914155614, "vol_rank_24h": 12},
+        {"token_address": "0x5cb6f181081301b44905f3ae15419112ecabd8a6", "symbol": "PIPEDOG", "name": "pipedog", "token_age_days": 14, "vol_24h": 3086349.116371109, "net_24h": 242740.49658815342, "vol_rank_24h": 13},
+        {"token_address": "0xd7321801caae694090694ff55a9323139f043b88", "symbol": "JUGGERNAUT", "name": "The Juggernaut", "token_age_days": 30, "vol_24h": 2829162.408767906, "vol_rank_24h": 14},
+        {"token_address": "0x8b48e9da0501a3556a961463fcf39bb426501d0d", "symbol": null, "name": null, "token_age_days": 1, "vol_24h": 2698615.1580809336, "vol_rank_24h": 15},
+        {"token_address": "0xbf2ad71540447a18517988943efc2f75f1b53d16", "symbol": null, "name": null, "token_age_days": 1, "vol_24h": 2597191.6255725212, "vol_rank_24h": 16},
+        {"token_address": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344", "symbol": "USO", "vol_24h": 2583890.604615406, "vol_rank_24h": 17},
+        {"token_address": "0x1b0e319c6a659f002271b69db8a7df2f911c153e", "symbol": "GME", "vol_24h": 2544067.9929406233, "vol_rank_24h": 18},
+        {"token_address": "0x00242dc3c1a12e0d04b592205303e16c2625e015", "symbol": null, "name": null, "token_age_days": 1, "vol_24h": 2463849.280273489, "net_24h": 27308.732985735172, "vol_rank_24h": 19},
+        {"token_address": "0x7b630f080807df83908b4ade46ba6396ee66b098", "symbol": null, "name": null, "token_age_days": 2, "vol_24h": 2318719.6714282255, "vol_rank_24h": 20},
+        {"token_address": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c", "symbol": "SPY", "vol_24h": 2249737.8005616427, "vol_rank_24h": 21},
+        {"token_address": "0x8f35c8bb8465e148984ff03eaab10a4a05113822", "symbol": null, "name": null, "token_age_days": 1, "vol_24h": 2114200.0120663894, "vol_rank_24h": 22},
+        {"token_address": "0xe9243ccd8ef8dd1543a9e1a5271d6005e4bbeed0", "symbol": null, "name": null, "token_age_days": 0, "vol_24h": 2099544.9682976324, "vol_rank_24h": 23},
+        {"token_address": "0x45242320dbb855eea8fd36804c6487e10e97fcf9", "symbol": "TENDIES", "vol_24h": 2086381.8317784634, "vol_rank_24h": 24},
+        {"token_address": "0xfd453d9bab9f807165cd3464ac6c9700ad9ee5cc", "symbol": null, "name": null, "token_age_days": 5, "vol_24h": 2000455.6556354964, "vol_rank_24h": 25},
+        {"token_address": "0x2fc21d39fc55a32d1225d484cfd057a1d0d8a2e5", "symbol": null, "name": null, "token_age_days": 1, "vol_24h": 1860622.2836910232, "vol_rank_24h": 26},
+        {"token_address": "0x3aa1e2b2e3fc31db04cd53043a92e8745a936769", "symbol": null, "name": null, "token_age_days": 1, "vol_24h": 1814785.8652744002, "vol_rank_24h": 27},
+        {"token_address": "0x232cdfc415d10b673845d83dc02ba2eabe7e30d1", "symbol": "IF", "vol_24h": 1738731.0253354039, "vol_rank_24h": 28},
+        {"token_address": "0xc72f232a6869e6cf34dc06129affd07f8a2a246a", "symbol": null, "name": null, "token_age_days": 4, "vol_24h": 1712493.5776829175, "vol_rank_24h": 29},
+        {"token_address": "0x56910d4409f3a0c78c64dd8d0545ff0705389870", "symbol": "Index", "vol_24h": 1653106.6666585053, "vol_rank_24h": 30}
+      ]
+    },
+    "Q-REACTIVATE": {
+      "query_id": 8269903,
+      "execution_id": "01KZQPND0XM89PQK0TF3RJQWEG",
+      "state": "COMPLETED",
+      "credits": "5.586",
+      "totalRowCount": 25,
+      "columns": ["token_address", "symbol", "token_age_days", "vol_yesterday", "vol_7d_avg_prior", "vol_accel", "net_yesterday", "net_2d_ago", "net_3d_ago", "holders_d1", "holders_d2", "holders_d3", "share_yesterday", "share_2d_ago", "vol_3d_vs_prior", "reactivation_core"],
+      "reactivation_core_1": ["LCH", "UP", "MOTION", "COCO", "RBT", "syrupUSDG", "USO"],
+      "top_accel": [
+        {"symbol": "LCH", "vol_accel": 69.48, "reactivation_core": 1},
+        {"symbol": "UP", "vol_accel": 46.76, "reactivation_core": 1},
+        {"symbol": "MOTION", "vol_accel": 15.90, "reactivation_core": 1}
+      ]
+    },
+    "Q-FLOW": {
+      "query_id": 8269897,
+      "execution_id": "01KZQPNDA9EX0QP5D5YSTM53Z5",
+      "state": "COMPLETED",
+      "credits": "0.638",
+      "totalRowCount": 102,
+      "columns": ["section", "token_address", "symbol", "metric", "side", "value_usd", "n_trades", "repeat_buyer_pct", "net_buy_wallet_pct", "net_usd_48h"],
+      "quality_summaries": [
+        {"symbol": "CASHCAT", "token_address": "0x020bfc650a365f8bb26819deaabf3e21291018b4", "n_trades": 6325, "repeat_buyer_pct": 37.04, "net_buy_wallet_pct": 83.08, "net_usd_48h": 1775285.77},
+        {"symbol": "PONS", "token_address": "0x39dbed3a2bd333467115de45665cc57f813c4571", "n_trades": 1923, "repeat_buyer_pct": 53.93, "net_buy_wallet_pct": 67.65, "net_usd_48h": 367104.32},
+        {"symbol": "SPCX", "token_address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea", "n_trades": 525, "repeat_buyer_pct": 52.38, "net_buy_wallet_pct": 48.19, "net_usd_48h": 70920.03},
+        {"symbol": "UP", "token_address": "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1", "n_trades": 1111, "repeat_buyer_pct": 51.76, "net_buy_wallet_pct": 84.16, "net_usd_48h": 383698.18},
+        {"symbol": "FRONG", "token_address": "0x6245e67affa44a23077f0ea7f981a8dc743a0c47", "n_trades": 1948, "repeat_buyer_pct": 50.05, "net_buy_wallet_pct": 74.64, "net_usd_48h": 20409.19},
+        {"symbol": null, "token_address": "0x76473aad1a39a4ad699822fc035321576a333743", "n_trades": 3406, "repeat_buyer_pct": 80.56, "net_buy_wallet_pct": 99.50, "net_usd_48h": 726.53},
+        {"symbol": null, "token_address": "0x77b0aa38451ccdc1b42587e2f80b9879a7f82356", "n_trades": 633, "repeat_buyer_pct": 0.95, "net_buy_wallet_pct": 50.55, "net_usd_48h": 5168.54},
+        {"symbol": null, "token_address": "0x8b48e9da0501a3556a961463fcf39bb426501d0d", "n_trades": 2696, "repeat_buyer_pct": 55.90, "net_buy_wallet_pct": 89.84, "net_usd_48h": 30620.83},
+        {"symbol": null, "token_address": "0x95d3bc5d467d448ac83c5b33ff90f4dcfaf4c1e4", "n_trades": 770, "repeat_buyer_pct": 24.68, "net_buy_wallet_pct": 90.91, "net_usd_48h": 2638933.97},
+        {"symbol": null, "token_address": "0xad2a703109863b53c4e294e9dfa8fe19d57c89f7", "n_trades": 2767, "repeat_buyer_pct": 55.40, "net_buy_wallet_pct": 99.49, "net_usd_48h": 46020.50},
+        {"symbol": "VIRTUAL", "token_address": "0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31", "n_trades": 416, "repeat_buyer_pct": 60.34, "net_buy_wallet_pct": 58.89, "net_usd_48h": -30782.14},
+        {"symbol": "STONKBROKER", "token_address": "0xe934e36a439c94017b64a3fece66af12099abf50", "n_trades": 1497, "repeat_buyer_pct": 48.63, "net_buy_wallet_pct": 76.69, "net_usd_48h": 163064.14}
+      ]
+    },
+    "Q-REFLEX": {
+      "query_id": 8271348,
+      "execution_id": "01KZQPNDEY4PZK66V0KT9JG5GA",
+      "state": "COMPLETED",
+      "credits": "1.111",
+      "totalRowCount": 17,
+      "columns": ["token_address", "symbol", "day", "vol", "net_usd", "absorption_ratio", "first_time_buyers", "median_first_buy", "addon_rate", "buy_burst_share", "retail_buy_share", "traders", "reflex_score", "reflex_label"],
+      "note": "Day column = 2026-08-10 (yesterday close for digest)",
+      "rows": [
+        {"token_address": "0x020bfc650a365f8bb26819deaabf3e21291018b4", "symbol": "CASHCAT", "reflex_score": 85, "reflex_label": "IGNITION", "vol": 21708749.52, "net_usd": 1047286.02, "absorption_ratio": 4.91, "first_time_buyers": 2772, "addon_rate": 0.152},
+        {"token_address": "0xe934e36a439c94017b64a3fece66af12099abf50", "symbol": "STONKBROKER", "reflex_score": 80, "reflex_label": "IGNITION", "vol": 7587229.86, "net_usd": 323384.71, "absorption_ratio": 4.15, "first_time_buyers": 436, "addon_rate": 0.238},
+        {"token_address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea", "symbol": "SPCX", "reflex_score": 80, "reflex_label": "IGNITION", "vol": 6146917.85, "net_usd": 63044.46, "absorption_ratio": 61.63, "first_time_buyers": 93, "addon_rate": 0.270},
+        {"token_address": "0x00242dc3c1a12e0d04b592205303e16c2625e015", "symbol": null, "reflex_score": 80, "reflex_label": "IGNITION", "vol": 2389114.47, "net_usd": 24810.03, "absorption_ratio": 66.42, "first_time_buyers": 1994, "addon_rate": 0.0},
+        {"token_address": "0xd7321801caae694090694ff55a9323139f043b88", "symbol": "JUGGERNAUT", "reflex_score": 70, "reflex_label": "WARMING", "vol": 2622528.67, "net_usd": 68457.58},
+        {"token_address": "0x6245e67affa44a23077f0ea7f981a8dc743a0c47", "symbol": "FRONG", "reflex_score": 65, "reflex_label": "WARMING", "vol": 2353519.20, "net_usd": 70260.92},
+        {"token_address": "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1", "symbol": "UP", "reflex_score": 60, "reflex_label": "MIXED", "vol": 4998415.27, "net_usd": 288033.43},
+        {"token_address": "0xad2a703109863b53c4e294e9dfa8fe19d57c89f7", "symbol": null, "reflex_score": 55, "reflex_label": "MIXED"},
+        {"token_address": "0xbf2ad71540447a18517988943efc2f75f1b53d16", "symbol": null, "reflex_score": 55, "reflex_label": "MIXED"},
+        {"token_address": "0x8b48e9da0501a3556a961463fcf39bb426501d0d", "symbol": null, "reflex_score": 55, "reflex_label": "MIXED"},
+        {"token_address": "0x76473aad1a39a4ad699822fc035321576a333743", "symbol": null, "reflex_score": 53, "reflex_label": "MIXED", "net_usd": -102435.58},
+        {"token_address": "0x39dbed3a2bd333467115de45665cc57f813c4571", "symbol": "PONS", "reflex_score": 53, "reflex_label": "MIXED", "net_usd": -208557.43},
+        {"token_address": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec", "symbol": "NVDA", "reflex_score": 53, "reflex_label": "MIXED"},
+        {"token_address": "0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31", "symbol": "VIRTUAL", "reflex_score": 48, "reflex_label": "COLD"},
+        {"token_address": "0x5cb6f181081301b44905f3ae15419112ecabd8a6", "symbol": "PIPEDOG", "reflex_score": 48, "reflex_label": "COLD"},
+        {"token_address": "0x95d3bc5d467d448ac83c5b33ff90f4dcfaf4c1e4", "symbol": null, "reflex_score": 35, "reflex_label": "COLD", "net_usd": 2558894.22},
+        {"token_address": "0x77b0aa38451ccdc1b42587e2f80b9879a7f82356", "symbol": null, "reflex_score": 35, "reflex_label": "COLD"}
+      ]
+    },
+    "Q-FLASH": {
+      "query_id": 8271470,
+      "execution_id": "01KZQPN81T7ZCQKBNTCX0JX331",
+      "state": "COMPLETED",
+      "credits": "0.152",
+      "totalRowCount": 25,
+      "columns": ["symbol", "token_address", "active_hours", "hot_hours", "warm_hours", "max_hour_vol", "vol_12h", "net_12h", "latest_label", "latest_net", "latest_absorp", "latest_buyers", "latest_hour", "flash_band", "flash_score"],
+      "flash_watch": [
+        {"symbol": null, "token_address": "0x6b711b581adde09158b5b26df9ed428caf8479b1", "flash_band": "FLASH_WATCH", "flash_score": 80, "latest_label": "FLASH_WARM", "latest_net": 1771, "vol_12h": 273475}
+      ],
+      "top_ignition": [
+        {"symbol": "CASHCAT", "flash_band": "FLASH_IGNITION", "flash_score": 100, "latest_label": "FLASH_HOT", "latest_net": 124021, "vol_12h": 6499178, "net_12h": -71610},
+        {"symbol": "PIPEDOG", "flash_band": "FLASH_IGNITION", "flash_score": 100, "latest_label": "FLASH_HOT", "latest_net": 10458, "vol_12h": 1102269, "net_12h": 284714},
+        {"symbol": "STONKBROKER", "flash_band": "FLASH_IGNITION", "flash_score": 100, "latest_label": "COLD", "latest_net": -96227, "vol_12h": 6968075},
+        {"symbol": "UP", "flash_band": "FLASH_IGNITION", "flash_score": 100, "latest_label": "COLD", "latest_net": -21648, "vol_12h": 6752564, "net_12h": 358124},
+        {"symbol": "PONS", "flash_band": "FLASH_IGNITION", "flash_score": 100, "latest_label": "FLASH_HOT", "latest_net": 205854, "vol_12h": 2421114},
+        {"symbol": "SPCX", "flash_band": "FLASH_IGNITION", "flash_score": 100, "latest_label": "FLASH_WARM", "latest_net": 28648, "vol_12h": 1136998, "net_12h": 323285},
+        {"symbol": "TENDIES", "flash_band": "FLASH_IGNITION", "flash_score": 100, "latest_label": "FLASH_HOT", "latest_net": 63901}
+      ]
+    },
+    "Q-COHORT": {
+      "query_id": 8271471,
+      "execution_id": "01KZQPNDDCMT5SVF8GJYMGP6V4",
+      "state": "COMPLETED",
+      "credits": "3.087",
+      "totalRowCount": 15,
+      "columns": ["symbol", "token_address", "all_traders", "winner_traders", "winner_trader_pct", "buy_usd", "winner_buy_usd", "winner_buy_pct", "net_usd", "cohort_size", "cohort_label"],
+      "hot_warm": [
+        {"symbol": null, "token_address": "0x8b48e9da0501a3556a961463fcf39bb426501d0d", "cohort_label": "COHORT_HOT", "winner_trader_pct": 28.75, "winner_buy_pct": 18.91, "net_usd": 29545},
+        {"symbol": "UP", "token_address": "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1", "cohort_label": "COHORT_HOT", "winner_trader_pct": 33.99, "winner_buy_pct": 13.21, "net_usd": 288033},
+        {"symbol": "JUGGERNAUT", "token_address": "0xd7321801caae694090694ff55a9323139f043b88", "cohort_label": "COHORT_WARM", "winner_trader_pct": 26.03, "winner_buy_pct": 9.85, "net_usd": 68458},
+        {"symbol": "PONS", "token_address": "0x39dbed3a2bd333467115de45665cc57f813c4571", "cohort_label": "COHORT_WARM", "winner_trader_pct": 28.43, "winner_buy_pct": 9.18, "net_usd": -208557}
+      ]
+    },
+    "Q-WATCH": {
+      "query_id": 8269904,
+      "execution_id": "01KZQPNDNBENK86GXEKKXYD7HX",
+      "state": "COMPLETED",
+      "credits": "0.872",
+      "totalRowCount": 9,
+      "parameter_key": "watchlist",
+      "parameter_value": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "columns": ["section", "token_address", "symbol", "k", "vol_usd", "buy_usd", "sell_usd", "net_usd", "traders", "median_price", "vol_24h", "net_24h"],
+      "cashcat": {
+        "symbol": "CASHCAT",
+        "token_address": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+        "summary": {"vol_24h": 24376190.367319234, "net_24h": 807804.5630335486, "net_48h_as_net_usd": 1392624.9668571758, "receivers_7d": 57283, "median_price_24h": 0.15150765298534927},
+        "daily": [
+          {"day": "2026-08-04", "vol_usd": 13748924.97, "net_usd": 501732.32, "traders": 2052, "median_price": 0.0717},
+          {"day": "2026-08-05", "vol_usd": 38647943.63, "net_usd": 1235741.09, "traders": 3439, "median_price": 0.0945},
+          {"day": "2026-08-06", "vol_usd": 108233699.95, "net_usd": -1185310.51, "traders": 7926, "median_price": 0.1228},
+          {"day": "2026-08-07", "vol_usd": 19092894.49, "net_usd": -372241.72, "traders": 2733, "median_price": 0.0984},
+          {"day": "2026-08-08", "vol_usd": 17393422.43, "net_usd": 1591623.92, "traders": 2349, "median_price": 0.1061},
+          {"day": "2026-08-09", "vol_usd": 24197476.59, "net_usd": 584820.40, "traders": 3053, "median_price": 0.1298},
+          {"day": "2026-08-10", "vol_usd": 21708749.52, "net_usd": 1047286.02, "traders": 4125, "median_price": 0.1515},
+          {"day": "2026-08-11", "vol_usd": 2667440.85, "net_usd": -239481.46, "traders": 820, "median_price": 0.1470}
+        ]
+      }
+    }
+  },
+  "highlights": {
+    "rx_ge_65": [
+      {"symbol": "CASHCAT", "address": "0x020bfc650a365f8bb26819deaabf3e21291018b4", "RX": 85, "label": "IGNITION"},
+      {"symbol": "STONKBROKER", "address": "0xe934e36a439c94017b64a3fece66af12099abf50", "RX": 80, "label": "IGNITION"},
+      {"symbol": "SPCX", "address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea", "RX": 80, "label": "IGNITION"},
+      {"symbol": "UNNAMED/ADORA?", "address": "0x00242dc3c1a12e0d04b592205303e16c2625e015", "RX": 80, "label": "IGNITION"},
+      {"symbol": "JUGGERNAUT", "address": "0xd7321801caae694090694ff55a9323139f043b88", "RX": 70, "label": "WARMING"},
+      {"symbol": "FRONG", "address": "0x6245e67affa44a23077f0ea7f981a8dc743a0c47", "RX": 65, "label": "WARMING"}
+    ],
+    "flash_ignition_or_watch": "See Q-FLASH; 24/25 FLASH_IGNITION, 1 FLASH_WATCH (0x6b711b581adde09158b5b26df9ed428caf8479b1)",
+    "cohort_hot_warm": [
+      {"address": "0x8b48e9da0501a3556a961463fcf39bb426501d0d", "symbol": null, "label": "COHORT_HOT"},
+      {"symbol": "UP", "label": "COHORT_HOT"},
+      {"symbol": "JUGGERNAUT", "label": "COHORT_WARM"},
+      {"symbol": "PONS", "label": "COHORT_WARM"}
+    ],
+    "high_vol_discover_top10": [
+      "CASHCAT $24.4M",
+      "UNNAMED 0x76473a…3743 $13.6M",
+      "UNNAMED 0x95d3bc…c1e4 $12.9M",
+      "UNNAMED 0xad2a70…89f7 $11.6M",
+      "STONKBROKER $9.7M",
+      "UNNAMED 0x77b0aa…2356 $8.5M",
+      "PONS $7.1M",
+      "UP $6.8M",
+      "SPCX $6.4M",
+      "FRONG $3.4M"
+    ],
+    "unnamed_with_addresses": [
+      "0x76473aad1a39a4ad699822fc035321576a333743",
+      "0x95d3bc5d467d448ac83c5b33ff90f4dcfaf4c1e4",
+      "0xad2a703109863b53c4e294e9dfa8fe19d57c89f7",
+      "0x77b0aa38451ccdc1b42587e2f80b9879a7f82356",
+      "0x8b48e9da0501a3556a961463fcf39bb426501d0d",
+      "0xbf2ad71540447a18517988943efc2f75f1b53d16",
+      "0x00242dc3c1a12e0d04b592205303e16c2625e015",
+      "0x7b630f080807df83908b4ade46ba6396ee66b098",
+      "0x8f35c8bb8465e148984ff03eaab10a4a05113822",
+      "0xe9243ccd8ef8dd1543a9e1a5271d6005e4bbeed0",
+      "0xfd453d9bab9f807165cd3464ac6c9700ad9ee5cc",
+      "0x2fc21d39fc55a32d1225d484cfd057a1d0d8a2e5",
+      "0x3aa1e2b2e3fc31db04cd53043a92e8745a936769",
+      "0xc72f232a6869e6cf34dc06129affd07f8a2a246a"
+    ]
+  }
+}
