@@ -32,7 +32,7 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 | Path | Purpose |
 |------|---------|
 | `core/manifest.json` | Registry: chains, connectors, **one** automation |
-| `core/scoring/` | MES, REFLEX, FLASH, INTEGRITY, EDGE, TABLE |
+| `core/scoring/` | MES, REFLEX, FLASH, INTEGRITY, THESIS, EDGE, TABLE |
 | `core/connectors/` | Pluggable data source configs |
 | `chains/<id>/dune/` | Chain-specific SQL |
 | `chains/<id>/config/` | Query IDs, watchlist |
@@ -47,7 +47,7 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 4. **Flash** — hourly (same-day launch path)
 5. **Cohort** — winner-wallet overlap (RH confirmation)
 6. **Watch** — pinned + carry-forward
-7. **Identity + narrative** — resolve names; web/social congruence (TABLE.md)
+7. **Thesis + public sources** — DexScreener/web by contract; English decoder; conviction 0–4 (THESIS.md)
 8. **Table read** — cross-chain regime in prose
 9. **Deliver** — Slack TAKE/WATCH/FADE + Memories
 

@@ -48,7 +48,7 @@ TOAD-style dumps can print $40M vol with weak absorption + negative net → RX s
 ## How RX combines with MES
 
 ```
-Final conviction = MES (macro) × RX gate
+Score gate = MES (macro) × RX. **Slack conviction** is the 0–4 thesis legs in THESIS.md — not this number.
 
 - MES ≥ 60 AND RX ≥ 80 → HIGH CONVICTION (IGNITION)
 - MES ≥ 60 AND RX 65–79 → WATCHLIST (WARMING)

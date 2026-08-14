@@ -4,16 +4,19 @@ Multi-chain meme scanner with **Reflex Score (RX)** + **FLASH** (hourly) + **COH
 
 **Chains:** Robinhood L2 · Solana  
 **Delivery:** Cursor Automation → Dune MCP → Slack digest  
-**Alpha:** Q-REFLEX (reloads) · Q-FLASH (same-day launches) · Q-COHORT (wallet graph) · INTEGRITY (bundle/wash veto)  
+**Alpha:** Q-REFLEX (reloads) · Q-FLASH (same-day launches) · Q-COHORT (wallet graph) · INTEGRITY (bundle/wash veto) · THESIS (English conviction + public sources)  
 **Future:** Coinglass (perp OI/funding modifiers) · pump.fun graduation
 
 ## Why this exists
 
 Volume scanners scream loudest on dump days. CASHCAT's Aug 6 listing climax was $107M vol / net−$1.18M. The **real setup** was Aug 3–5 — when Reflex Score hit 82→83→100 *before* the blowup. Daily RX still missed flash launches like GME — **Q-FLASH** catches those hourly. **Q-COHORT** confirms when prior meme winners rotate into the next name.
 
-See [core/scoring/REFLEX.md](core/scoring/REFLEX.md) · [core/scoring/FLASH.md](core/scoring/FLASH.md) · [core/scoring/INTEGRITY.md](core/scoring/INTEGRITY.md) · [docs/BACKTESTS.md](docs/BACKTESTS.md).
+See [core/scoring/REFLEX.md](core/scoring/REFLEX.md) · [core/scoring/FLASH.md](core/scoring/FLASH.md) · [core/scoring/INTEGRITY.md](core/scoring/INTEGRITY.md) · [core/scoring/THESIS.md](core/scoring/THESIS.md) · [docs/BACKTESTS.md](docs/BACKTESTS.md).
 
-Replay the Aug 14 integrity fixture: `python3 scripts/replay_integrity.py`
+```bash
+python3 scripts/replay_integrity.py
+python3 scripts/replay_thesis.py
+```
 
 ## Quick start
 

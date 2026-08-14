@@ -22,6 +22,11 @@ Done when: every number cites a query result; RX + FLASH attached where availabl
 6. Q-WATCH for watchlist + high-conviction candidates
 
 ## Return
-For each candidate: symbol, address, vol, MES, RX, flash_band, cohort_label (RH), integrity_label, 1-line why.
+For each candidate (English first — see `core/scoring/THESIS.md`):
+- symbol, address, integrity_label
+- **tape_sentence** — decoded microstructure (not "RX 65")
+- DexScreener: MC, LP, websites[], socials[] if you can fetch
+- public_label: EARLY | PRODUCT | CLIMAX | SILENCE | WARNING
+- 1 cited URL or "silence for this contract"
 BUNDLE / WASH / SUSPECT (age ≤2d) cannot be HIGH CONVICTION.
 Never invent numbers. Research only.

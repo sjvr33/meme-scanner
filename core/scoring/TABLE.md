@@ -21,13 +21,11 @@ Memecoins are **coordination + exit-liquidity** games:
 
 1. **On-chain first** — INTEGRITY, then MES, RX, FLASH, COHORT (see INTEGRITY.md + FLASH.md). Bundle / wash / faded same-day FLASH → FADE. If the gate fails, do not invent a bullish story from Twitter.
 2. **Identity** — Resolve symbol / name from DexScreener, explorer, or web if Dune says UNNAMED. Never leave "RH UNNAMED" in Slack without a human label if one exists.
-3. **Narrative pass** — For every token that survives into PLAYS or PASSES (top traps), search the web + social chatter:
-   - What is the *story* people are coordinating on?
-   - Is it fresh Schelling (new meme / catalyst) or recycled bag-holding?
-   - Are KOLs farming engagement on a dump?
-   - Does narrative *confirm* absorption, or is it cope over red net flow?
-4. **Opponent model** — One sentence: who is selling to whom?
-5. **Verdict** — TAKE / WATCH / FADE only. No mushy "interesting."
+3. **Translate** — Decode scores into English (`THESIS.md`). Never lead with "RX 65".
+4. **Public pass** — DexScreener by **contract** + web search. Label EARLY / PRODUCT / CLIMAX / SILENCE / WARNING. Silence is a finding.
+5. **Opponent model** — One sentence: who is selling to whom?
+6. **Conviction 0–4** — integrity + ladder + story + opponent. This is the hand, not the RX number.
+7. **Verdict** — TAKE / WATCH / FADE only. No mushy "interesting."
 
 ## Verdict definitions
 
@@ -58,17 +56,17 @@ Research only — not financial advice. "TAKE" means research priority, not a bu
 
 ## Good synthesis (pattern)
 
-> **FRONG — TAKE (flash/cohort)**  
-> On-chain: FLASH_IGNITION, latest hour still net-buy, winner wallets overlapping.  
-> Narrative: [what the meme is / why attention now].  
-> Table: early money still absorbing; retail not yet the only bid.  
-> Kill: latest_net flips red or FLASH climax with −$ net.
+> **FRONG — TAKE · conviction 4/4**  
+> Thesis: Uniswap designer minted the pools.trade teaser frog; that is a real Schelling object.  
+> Tape: yesterday's buyers still adding; small bids eating real offers (CLEAN).  
+> Public: The Defiant + Uniswap blog on pools.trade.  
+> Opponent: hot wallets rotating; retail not yet the only bid.
 
 ## Bad synthesis (anti-pattern)
 
 > RH FRONG — MES 70 · RX 65 · FLASH 100 · COHORT_WARM — 0x6245…
 
-That is a scoreboard, not a read.
+That is a scoreboard, not a read. See `THESIS.md`.
 
 ## Example table read (shape only)
 
@@ -78,11 +76,12 @@ SOL tape is loud and red — TOAD/Jimothy/CATE are paying exit liquidity.
 Real hands forming on RH flash/reload prints, not on SOL volume leaders.
 
 ♠️ PLAYS
-• RH FRONG — WATCH · path FLASH
-  On-chain: FLASH_IGNITION, latest hour still net-buy, COHORT_WARM (~12%)
-  Narrative: [resolved meme + whether chatter is early or climax]
+• RH FRONG — WATCH · path FLASH · conviction 3/4
+  Thesis: Uniswap teaser-frog lore is a real Schelling object; wait for the next print.
+  Tape: latest hour still net-buy; yesterday's buyers adding (CLEAN)
+  Public: The Defiant on pools.trade / FRONG
   Opponent: hot wallets rotating winners; retail not yet the only bid
-  Kill: latest_net flips red or climax hour with −$ net
+  Kill: latest hour flips red
   `0x6245…`
 
 🚫 PASSES

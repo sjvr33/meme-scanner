@@ -84,13 +84,14 @@ When a connector is enabled, it adds **modifier points** to MES — never replac
 
 Connectors plug in via `core/connectors/*.json` — see README there.
 
-### Layer 6 — Narrative / table read (required in digest)
+### Layer 6 — Thesis / public congruence (required in digest)
 
-After scores, run identity + web/social skim per @core/scoring/TABLE.md.
+After scores, **translate then argue with the internet** (`THESIS.md`).
 
-- Narrative **confirms or downgrades** — never upgrades a failed RX/FLASH gate to TAKE
-- Congruence: absorption + early/quiet story → asymmetric; net-sell + loud hype → FADE
-- Slack must ship TAKE / WATCH / FADE with opponent model — not a scoreboard
+- Conviction is 0–4 independent legs (integrity, ladder, story, opponent) — **not** the RX number
+- DexScreener + web search the **contract**. Silence / climax / rug-warning are findings
+- Narrative **confirms or downgrades** — never upgrades a failed gate to TAKE
+- Slack is Thesis / Tape / Public / Opponent — not a scoreboard
 
 ## What we deliberately ignore
 

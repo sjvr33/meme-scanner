@@ -1,7 +1,7 @@
 {
   "name": "meme-scanner",
-  "version": "2.4.0",
-  "description": "Multi-chain meme scanner: MES×RX + FLASH + COHORT + INTEGRITY (bundle/wash veto) + TABLE + pluggable connectors",
+  "version": "2.5.0",
+  "description": "Multi-chain meme scanner: INTEGRITY + THESIS (English conviction + public sources) + MES×RX + FLASH + COHORT + TABLE",
   "chains": ["robinhood", "solana"],
   "connectors": {
     "dune": {
@@ -18,11 +18,12 @@
     }
   },
   "scoring": {
-    "engine": "MES×RX + FLASH + COHORT + INTEGRITY + TABLE",
+    "engine": "MES×RX + FLASH + COHORT + INTEGRITY + THESIS + TABLE",
     "mes_doc": "core/scoring/MES.md",
     "reflex_doc": "core/scoring/REFLEX.md",
     "flash_doc": "core/scoring/FLASH.md",
     "integrity_doc": "core/scoring/INTEGRITY.md",
+    "thesis_doc": "core/scoring/THESIS.md",
     "edge_doc": "core/scoring/EDGE.md",
     "table_doc": "core/scoring/TABLE.md",
     "backtests": "docs/BACKTESTS.md"
