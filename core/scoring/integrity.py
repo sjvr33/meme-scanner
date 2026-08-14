@@ -94,21 +94,23 @@ def classify(row: dict[str, Any]) -> dict[str, Any]:
         label = "CLEAN"
         reasons.append("inside organic band")
 
+    same_day = age is not None and age <= 1
     first_session_flash = (
-        age is not None
-        and age <= 1
+        same_day
         and "FLASH_IGNITION" in flash
         and still_on_flash is not True
     )
-    flash_died = still_on_flash is False and "FLASH" in flash
-    price_up_net_red = session_net is not None and session_net < 0
+    # Q-FLASH can stamp FLASH_IGNITION on a crowded board. A COLD last hour
+    # is only a dump tell on a same-day print — not on a week-old product.
+    flash_died = same_day and still_on_flash is False and "FLASH" in flash
+    price_up_net_red = same_day and session_net is not None and session_net < 0
 
     hard_fade = label in HARD_FADE or (
         label == "SUSPECT" and (age is None or age <= 2 or "FLASH" in flash)
     )
     if first_session_flash:
         reasons.append("age ≤1d FLASH_IGNITION needs a second session")
-    if flash_died or (price_up_net_red and age is not None and age <= 1):
+    if flash_died or price_up_net_red:
         hard_fade = True
         reasons.append("same-day FLASH faded or session net flipped red")
 

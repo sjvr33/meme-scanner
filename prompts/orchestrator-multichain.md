@@ -14,7 +14,7 @@ Never invent data. Research only — not financial advice.
 - For Q-WATCH, pass watchlist from each chain's `watchlist.json`.
 - **Three alpha paths** (FLASH.md): reload (MES×RX), flash (Q-FLASH), cohort boost — all after INTEGRITY veto.
 - Include contract/mint for every token.
-- **Never ship a Slack message that is only score dumps.** Every Slack name needs a THESIS.md card (Thesis / Tape / Public / Opponent / Kill / Conviction). English first; scores only in parentheses.
+- **Never ship a Slack message that is only score dumps.** Slack is a trader rundown: I'd look / I'm watching / I'd pass. Internal codes stay in your head.
 
 ---
 
@@ -68,10 +68,9 @@ For **every token** that will appear under PLAYS, PASSES, or WATCHED — follow 
 
 1. **DexScreener** — `https://api.dexscreener.com/latest/dex/tokens/<address>`. Record name, MC, LP, 24h %, `websites[]`, `socials[]`. Empty site/socials is a finding (SILENCE).
 2. **Web search** — `{ticker} {chain} {first 8 of address} memecoin`. Extract catalyst, listing, rug/bundle article, or silence. Cite URLs.
-3. **Label the story** — EARLY / PRODUCT / CLIMAX / SILENCE / WARNING (THESIS.md).
-4. **Translate the tape** — Use the decoder. Do not write "RX 65". Write what absorp / addon / net-buy wallets *mean*.
-5. **Conviction 0–4** — integrity + ladder + story + opponent. TAKE needs ≥3 legs **and** story EARLY/PRODUCT **and** CLEAN gates. WARNING or CLIMAX caps at WATCH. SILENCE + BUNDLE/WASH = FADE.
-6. **AHEAD (forward seat)** — Assign information clock T-2…T+2 and seat IN / BLINDS / OOP (`AHEAD.md`). Write **Retail next**: what level-0 does in 6–24h. TAKE also requires IN POSITION (T-2 or T-1). T0/T+1/T+2 cannot be TAKE.
+3. **Decide the story in English** — early lore, real product, listing climax, silence, or a public warning. Do not print the internal label.
+4. **Translate the tape** — people coming back vs farm vs wash. Never write score names.
+5. **Take a seat** — is the crowd not here yet, already the bid, or buying a headline that already happened? You only *look* when you are in front of retail, not next to them.
 
 Narrative **never** upgrades a failed on-chain gate to TAKE. Silence is a valid Public line.
 

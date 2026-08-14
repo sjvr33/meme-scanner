@@ -1,0 +1,36 @@
+{
+  "source": {
+    "rh_flow": "01M00RS44FP2VE0JR7WQMNDRY4",
+    "sol_flow": "01M00RS43TB33NEZ4EWZRRBJY7",
+    "rh_reflex": "01M00RV288RKDZAQE7S9JFQGYE",
+    "sol_reflex": "01M00RV28N7VN7VYAQG1TSE3AK",
+    "rh_flash": "01M00RV28ST6PJ3FQ6SBY4H8P4",
+    "as_of": "2026-08-14T20:40:00+02:00"
+  },
+  "tokens": [
+    {"chain": "robinhood", "section": "quality", "symbol": "CASHCAT", "token_address": "0x020bfc650a365f8bb26819deaabf3e21291018b4", "repeat_buyer_pct": 35.675, "net_buy_wallet_pct": 84.901, "net_usd_48h": -2590093.38, "integrity_label": "CLEAN", "mid_buy_usd": 5046499.37, "mid_sell_usd": 6401014.59},
+    {"chain": "robinhood", "section": "quality", "symbol": "HOOPLA", "token_address": "0x6713fdee919330531eca46c172fb1498ea711c7a", "repeat_buyer_pct": 80.949, "net_buy_wallet_pct": 99.445, "net_usd_48h": -1495.71, "integrity_label": "BUNDLE", "mid_buy_usd": 392892.74, "mid_sell_usd": 3484728.19},
+    {"chain": "robinhood", "section": "quality", "symbol": "COBRA", "token_address": "0xb0d55784c73fa1bf2c21571e213f4e88aef36ce1", "repeat_buyer_pct": 60.076, "net_buy_wallet_pct": 99.849, "net_usd_48h": 64249.30, "integrity_label": "BUNDLE", "mid_buy_usd": 1872893.25, "mid_sell_usd": 1517334.88},
+    {"chain": "robinhood", "section": "quality", "symbol": "DOGO", "token_address": "0x77b0aa38451ccdc1b42587e2f80b9879a7f82356", "repeat_buyer_pct": 0.425, "net_buy_wallet_pct": 50.0, "net_usd_48h": -6929.06, "integrity_label": "WASH", "mid_buy_usd": 8486273.71, "mid_sell_usd": 8492899.68},
+    {"chain": "robinhood", "section": "quality", "symbol": "MOW", "token_address": "0x76761d4aee1e7d6b2b8dedbd13925d6c220b0725", "repeat_buyer_pct": 0.912, "net_buy_wallet_pct": 49.861, "net_usd_48h": 279.85, "integrity_label": "WASH", "mid_buy_usd": 5247507.49, "mid_sell_usd": 5248655.84},
+    {"chain": "robinhood", "section": "quality", "symbol": "STONKBROKER", "token_address": "0xe934e36a439c94017b64a3fece66af12099abf50", "repeat_buyer_pct": 47.263, "net_buy_wallet_pct": 81.502, "net_usd_48h": 579764.04, "integrity_label": "CLEAN", "mid_buy_usd": 5850278.53, "mid_sell_usd": 5402451.47},
+    {"chain": "robinhood", "section": "quality", "symbol": "$ROBBIE", "token_address": "0xe0eba1b76b73be7bfa7716b6ca96f724930e2263", "repeat_buyer_pct": 49.494, "net_buy_wallet_pct": 68.165, "net_usd_48h": 11582.13, "integrity_label": "CLEAN", "mid_buy_usd": 1242765.86, "mid_sell_usd": 1337055.40},
+    {"chain": "solana", "section": "quality", "symbol": "XST", "token_address": "XSTuo1fV7HHMhs4BYiwtrWSLsMCJNrooH2AssWTYZqP", "mint": "XSTuo1fV7HHMhs4BYiwtrWSLsMCJNrooH2AssWTYZqP", "repeat_buyer_pct": 50.778, "net_buy_wallet_pct": 63.343, "net_usd_48h": 89968.29, "integrity_label": "CLEAN", "mid_buy_usd": 1764940.50, "mid_sell_usd": 2949118.35}
+  ],
+  "reflex": [
+    {"symbol": "STONKBROKER", "token_address": "0xe934e36a439c94017b64a3fece66af12099abf50", "absorption_ratio": 2.4786, "addon_rate": 0.2109, "first_time_buyers": 876},
+    {"symbol": "CASHCAT", "token_address": "0x020bfc650a365f8bb26819deaabf3e21291018b4", "absorption_ratio": 2.9036, "addon_rate": 0.2028, "first_time_buyers": 1539},
+    {"symbol": "HOOPLA", "token_address": "0x6713fdee919330531eca46c172fb1498ea711c7a", "absorption_ratio": 121.5918, "addon_rate": 0.0, "first_time_buyers": 2800},
+    {"symbol": "COBRA", "token_address": "0xb0d55784c73fa1bf2c21571e213f4e88aef36ce1", "absorption_ratio": 2.5941, "addon_rate": 0.0, "first_time_buyers": 2466},
+    {"symbol": "DOGO", "token_address": "0x77b0aa38451ccdc1b42587e2f80b9879a7f82356", "absorption_ratio": 0.0091, "addon_rate": 0.0045, "first_time_buyers": 655},
+    {"symbol": "XST", "token_address": "XSTuo1fV7HHMhs4BYiwtrWSLsMCJNrooH2AssWTYZqP", "absorption_ratio": 11.8986, "addon_rate": 0.1603, "first_time_buyers": 4280}
+  ],
+  "flash": [
+    {"symbol": "STONKBROKER", "token_address": "0xe934e36a439c94017b64a3fece66af12099abf50", "flash_band": "FLASH_IGNITION", "latest_label": "COLD", "latest_net": -104466, "net_12h": 582559},
+    {"symbol": "CASHCAT", "token_address": "0x020bfc650a365f8bb26819deaabf3e21291018b4", "flash_band": "FLASH_IGNITION", "latest_label": "FLASH_HOT", "latest_net": 27777, "net_12h": -980605},
+    {"symbol": "DOGO", "token_address": "0x77b0aa38451ccdc1b42587e2f80b9879a7f82356", "flash_band": "FLASH_IGNITION", "latest_label": "COLD", "latest_net": 0, "net_12h": 331},
+    {"symbol": "$ROBBIE", "token_address": "0xe0eba1b76b73be7bfa7716b6ca96f724930e2263", "flash_band": "FLASH_IGNITION", "latest_label": "FLASH_HOT", "latest_net": 17148, "net_12h": -32489},
+    {"symbol": "MOW", "token_address": "0x76761d4aee1e7d6b2b8dedbd13925d6c220b0725", "flash_band": "FLASH_IGNITION", "latest_label": "FLASH_HOT", "latest_net": 195, "net_12h": 8534},
+    {"symbol": "FRONG", "token_address": "0x6245e67affa44a23077f0ea7f981a8dc743a0c47", "flash_band": "FLASH_IGNITION", "latest_label": "COLD", "latest_net": -15774, "net_12h": -31892}
+  ]
+}

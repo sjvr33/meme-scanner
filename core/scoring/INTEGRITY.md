@@ -58,7 +58,7 @@ These **cannot** be PLAY, TAKE, or HIGH CONVICTION:
 1. integrity_label ∈ {WASH, BUNDLE}
 2. integrity_label = SUSPECT **and** (age ≤ 2d **or** FLASH path)
 3. Age ≤ 1d FLASH_IGNITION without a second session
-4. FLASH_IGNITION morning + gone by evening, or price up + session net red
+4. Age ≤ 1d FLASH_IGNITION morning + gone by evening, or same-day price up + session net red. A COLD last hour on an older name is not a veto — Q-FLASH stamps ignition on a crowded board.
 
 ## Queries / code
 

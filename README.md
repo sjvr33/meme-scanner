@@ -16,6 +16,7 @@ See [core/scoring/AHEAD.md](core/scoring/AHEAD.md) · [core/scoring/THESIS.md](c
 ```bash
 python3 scripts/replay_integrity.py
 python3 scripts/replay_thesis.py
+python3 scripts/run_board.py core/scoring/fixtures/live_flow.json
 ```
 
 ## Quick start

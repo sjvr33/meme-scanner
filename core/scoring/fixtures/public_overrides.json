@@ -1,0 +1,77 @@
+{
+  "CASHCAT": {
+    "public_label": "CLIMAX",
+    "public": "Robinhood listed it in the app on Aug 6. That run already happened. https://coinsprobe.com/robinhood-lists-cashcat-memecoin-jumps-sharply-on-official-announcement/",
+    "thesis": "The chain's flagship cat already got the app listing. Tonight the flow can still look two-sided while mid-size money sells into a story everyone knows.",
+    "opponent": "Early winners distributing into people who still think the listing is news.",
+    "opponent_class": "winners_distributing",
+    "kill": "another heavy net-sell day shows up.",
+    "age_days": 40
+  },
+  "XST": {
+    "public_label": "WARNING",
+    "public": "Bubblemaps flagged a tight holder cluster plus TikTok clips. https://www.cryptopolitan.com/bubblemaps-xst-warning-on-tiktok/",
+    "thesis": "The flow can look like a reload. The float does not. Thin liquidity, a clustered supply warning, and several other coins use the same ticker.",
+    "opponent": "A clustered holder set can sell into mid-size flow that looks organic.",
+    "opponent_class": "clustered_float",
+    "kill": "I wouldn't add while that supply warning is still the public story.",
+    "age_days": 20
+  },
+  "STONKBROKER": {
+    "public_label": "PRODUCT",
+    "public": "https://www.stonkbrokers.cash",
+    "thesis": "Not a naked ticker — broker NFTs that hold stock tokens, real site, real liquidity. The setup is not finished enough to chase.",
+    "opponent": "Activation demand versus ordinary sellers — not a 99% buyer farm.",
+    "opponent_class": "nft_activation_bid",
+    "kill": "liquidity collapses or the book starts looking like a farm.",
+    "age_days": 28,
+    "mes_ok": false
+  },
+  "HOOPLA": {
+    "public_label": "SILENCE",
+    "public": "DexScreener has no website or socials for this contract. Web hits a different dead Base ticker, not 0x6713fdee.",
+    "age_days": 0,
+    "flash_band": "FLASH_IGNITION",
+    "still_on_flash": false,
+    "thesis": "Same-day ticker with no website and no socials. The book looked like demand because almost every wallet was a buyer.",
+    "opponent": "Bundled inventory selling into first-day retail.",
+    "opponent_class": "retail_only_bid",
+    "kill": "Already dead if the pool is empty."
+  },
+  "$ROBBIE": {
+    "public_label": "CLIMAX",
+    "public": "Twitter @RobbieOnRH, no website. Web search for 0xe0eba1b7 finds other Robbie/ROBB/ROB contracts — not this one. https://x.com/RobbieOnRH",
+    "thesis": "Same-day mascot ticker. A Twitter handle is not a story, and the main pool already printed thousands of percent. That is the crowd, not an early seat.",
+    "opponent": "First-day retail chasing a brand-adjacent name.",
+    "opponent_class": "retail_only_bid",
+    "kill": "I wouldn't add into a same-day thousands-of-percent print.",
+    "age_days": 0,
+    "flash_band": "FLASH_IGNITION",
+    "still_on_flash": true
+  },
+  "COBRA": {
+    "public_label": "WARNING",
+    "public": "A landing page is not a ladder when almost every wallet is a net buyer.",
+    "age_days": 1,
+    "thesis": "Farm-pack sibling. A site and a Twitter handle showed up. 99.8% of wallets are still net buyers.",
+    "opponent": "Farm wallets walking a ticker into late bids.",
+    "opponent_class": "retail_only_bid",
+    "kill": "I wouldn't put risk on this."
+  },
+  "DOGO": {
+    "public_label": "CLIMAX",
+    "thesis": "Listed as DogBull with a market cap. Mid-size buys and sells still print the same dollars.",
+    "opponent": "Circular mid flow, not a crowd.",
+    "opponent_class": "retail_only_bid",
+    "kill": "I wouldn't put risk on this.",
+    "age_days": 30
+  },
+  "MOW": {
+    "public_label": "SILENCE",
+    "thesis": "Same wash print as the other mid-size loop — buys and sells match, almost nobody trades twice.",
+    "opponent": "Circular mid flow.",
+    "opponent_class": "retail_only_bid",
+    "kill": "I wouldn't put risk on this.",
+    "age_days": 30
+  }
+}

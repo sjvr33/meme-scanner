@@ -1,6 +1,6 @@
 {
   "name": "meme-scanner",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Multi-chain meme scanner: Dune hole cards + public board + AHEAD (sit in front of retail)",
   "chains": ["robinhood", "solana"],
   "connectors": {
