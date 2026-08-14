@@ -42,6 +42,7 @@ Config source of truth: `chains/<chain>/config/query-ids.json`
 - **Q-COHORT** — winner-wallet confirmation (RH)
 - **TABLE** — narrative/web congruence + TAKE/WATCH/FADE voice (`core/scoring/TABLE.md`)
 - **THESIS** — English decoder + DexScreener/web + conviction 0–4 (`core/scoring/THESIS.md`)
+- **AHEAD** — information clock + seat + Retail next (`core/scoring/AHEAD.md`)
 
 HIGH CONVICTION paths in `core/scoring/FLASH.md`. Narrative never upgrades a failed on-chain gate.
 

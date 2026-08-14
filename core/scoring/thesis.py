@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from core.scoring.ahead import clock_and_seat
 from core.scoring.integrity import classify as classify_integrity
 
 ABSORP_LADDER_LO = 1.2
@@ -63,7 +64,12 @@ def conviction_legs(row: dict[str, Any], integrity: dict[str, Any]) -> list[str]
     return legs
 
 
-def slack_verdict(row: dict[str, Any], integrity: dict[str, Any], legs: list[str]) -> str:
+def slack_verdict(
+    row: dict[str, Any],
+    integrity: dict[str, Any],
+    legs: list[str],
+    ahead: dict[str, Any],
+) -> str:
     public = (row.get("public_label") or "").upper()
     if integrity["verdict"] == "FADE" or integrity["label"] in {"BUNDLE", "WASH"}:
         return "FADE"
@@ -73,6 +79,7 @@ def slack_verdict(row: dict[str, Any], integrity: dict[str, Any], legs: list[str
         and n >= 3
         and public in STORY_LEGS
         and row.get("mes_ok", True)
+        and ahead["in_position"]
     )
     if take_ok:
         return "TAKE"
@@ -84,6 +91,7 @@ def slack_verdict(row: dict[str, Any], integrity: dict[str, Any], legs: list[str
 def card(row: dict[str, Any]) -> dict[str, Any]:
     integrity = classify_integrity(row)
     legs = conviction_legs(row, integrity)
+    ahead = clock_and_seat(row, integrity["label"])
     n = len(legs)
     return {
         "symbol": row.get("symbol"),
@@ -98,6 +106,10 @@ def card(row: dict[str, Any]) -> dict[str, Any]:
         "kill": row.get("kill") or "",
         "legs": legs,
         "conviction": f"{n}/4",
-        "verdict": slack_verdict(row, integrity, legs),
+        "clock": ahead["clock"],
+        "seat": ahead["seat"],
+        "retail_next": ahead["retail_next"],
+        "in_position": ahead["in_position"],
+        "verdict": slack_verdict(row, integrity, legs, ahead),
         "can_play": integrity["can_play"],
     }

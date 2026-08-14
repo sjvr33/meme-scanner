@@ -86,7 +86,9 @@ Every PLAY / PASS / WATCHED name gets this. Fail the run if any PLAY is missing 
   Thesis: [2 sentences a human can argue with. No score names required.]
   Tape: [decoded microstructure in English] (integrity …)
   Public: [what the internet/DexScreener says + URL or "silence"]
-  Opponent: [who buys from whom]
+  Seat: [IN|BLINDS|OOP] at [T-2|T-1|T0|T+1|T+2]  — AHEAD.md
+  Retail next: [what level-0 does in 6–24h]
+  Opponent: [who buys from whom now]
   Kill: [concrete abort]
   Conviction: n/4 — [which legs]
   `address`

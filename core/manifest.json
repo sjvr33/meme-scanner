@@ -1,7 +1,7 @@
 {
   "name": "meme-scanner",
-  "version": "2.5.0",
-  "description": "Multi-chain meme scanner: INTEGRITY + THESIS (English conviction + public sources) + MES×RX + FLASH + COHORT + TABLE",
+  "version": "2.6.0",
+  "description": "Multi-chain meme scanner: Dune hole cards + public board + AHEAD (sit in front of retail)",
   "chains": ["robinhood", "solana"],
   "connectors": {
     "dune": {
@@ -18,7 +18,8 @@
     }
   },
   "scoring": {
-    "engine": "MES×RX + FLASH + COHORT + INTEGRITY + THESIS + TABLE",
+    "engine": "MES×RX + FLASH + COHORT + INTEGRITY + THESIS + AHEAD + TABLE",
+    "ahead_doc": "core/scoring/AHEAD.md",
     "mes_doc": "core/scoring/MES.md",
     "reflex_doc": "core/scoring/REFLEX.md",
     "flash_doc": "core/scoring/FLASH.md",

@@ -24,10 +24,15 @@ def main() -> int:
     for row in payload["tokens"]:
         result = card(row)
         n = int(result["conviction"].split("/")[0])
-        print(f"• {result['chain'].upper()} {result['symbol']} — {result['verdict']} · conviction {result['conviction']}")
+        print(
+            f"• {result['chain'].upper()} {result['symbol']} — {result['verdict']} "
+            f"· {result['clock']} {result['seat']} · conviction {result['conviction']}"
+        )
         print(f"  Thesis: {result['thesis']}")
         print(f"  Tape: {result['tape']} (integrity {result['integrity']})")
         print(f"  Public: {result['public']}")
+        print(f"  Seat: {result['seat']} at {result['clock']}")
+        print(f"  Retail next: {result['retail_next']}")
         print(f"  Opponent: {result['opponent']}")
         print(f"  Kill: {result['kill']}")
         print(f"  Legs: {', '.join(result['legs']) or 'none'}")
@@ -42,13 +47,16 @@ def main() -> int:
         min_c = row.get("expected_min_conviction")
         if min_c is not None and n < int(min_c):
             failures.append(f"{row['symbol']}: conviction {n} < min {min_c}")
+        expected_clock = row.get("expected_clock")
+        if expected_clock and expected_clock != result["clock"]:
+            failures.append(f"{row['symbol']}: clock {result['clock']} != {expected_clock}")
 
     if failures:
         print("FAIL")
         for item in failures:
             print(f"  - {item}")
         return 1
-    print("PASS — fades have no story legs; CASHCAT/XST capped at WATCH; FRONG can TAKE.")
+    print("PASS — fades OOP; CASHCAT T+2 / XST T+1 capped; FRONG T-1 IN can TAKE.")
     return 0
 
 

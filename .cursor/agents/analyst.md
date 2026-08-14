@@ -11,7 +11,7 @@ Done when: each token has a THESIS.md card (Thesis / Tape / Public / Conviction)
 
 ## Rules
 - Use Memories from the morning digest OR re-run Q-REFLEX + Q-FLASH + Q-WATCH
-- Scoring: `core/scoring/MES.md`, `REFLEX.md`, `FLASH.md`, `INTEGRITY.md`, `THESIS.md`
+- Scoring: `core/scoring/MES.md`, `REFLEX.md`, `FLASH.md`, `INTEGRITY.md`, `THESIS.md`, `AHEAD.md`
 - BUNDLE / WASH / faded same-day FLASH cannot be STARTER
 - Never invent numbers. Cite query IDs.
 

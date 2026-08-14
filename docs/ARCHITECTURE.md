@@ -48,7 +48,8 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 5. **Cohort** — winner-wallet overlap (RH confirmation)
 6. **Watch** — pinned + carry-forward
 7. **Thesis + public sources** — DexScreener/web by contract; English decoder; conviction 0–4 (THESIS.md)
-8. **Table read** — cross-chain regime in prose
+8. **AHEAD** — information clock + seat + Retail next (sit in front of retail)
+9. **Table read** — cross-chain regime in prose
 9. **Deliver** — Slack TAKE/WATCH/FADE + Memories
 
 ## Adding a new chain

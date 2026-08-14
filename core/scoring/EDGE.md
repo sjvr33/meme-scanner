@@ -93,6 +93,14 @@ After scores, **translate then argue with the internet** (`THESIS.md`).
 - Narrative **confirms or downgrades** — never upgrades a failed gate to TAKE
 - Slack is Thesis / Tape / Public / Opponent — not a scoreboard
 
+### Layer 7 — AHEAD (forward seat) ★ WHY WE BEAT RETAIL
+
+Dune = hole cards. Public = board. **AHEAD** is the seat: T-2…T+2 clock + level-k + "Retail next".
+
+Retail is level 0 (green candle / headline / first FLASH). L1 fades all volume and misses CASHCAT Aug 3–5. L2 sits at T-2/T-1 and fades T+1/T+2. L3 farms fake T-2 — INTEGRITY catches them.
+
+TAKE requires IN POSITION. CASHCAT listing hour and HOOPLA morning FLASH are the same mistake: playing next to retail instead of in front of them. See `core/scoring/AHEAD.md`.
+
 ## What we deliberately ignore
 
 - Raw "new token" alerts without volume/trader filters (noise)

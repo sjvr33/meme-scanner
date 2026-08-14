@@ -23,7 +23,8 @@
       "opponent": "Bundled inventory selling into first-day retail.",
       "kill": "Already dead — LP gone.",
       "expected_verdict": "FADE",
-      "expected_max_conviction": 0
+      "expected_max_conviction": 0,
+      "expected_clock": "T+1"
     },
     {
       "symbol": "COBRA",
@@ -44,7 +45,8 @@
       "opponent": "Farm wallets walking a ticker into late bids.",
       "kill": "Integrity BUNDLE.",
       "expected_verdict": "FADE",
-      "expected_max_conviction": 0
+      "expected_max_conviction": 0,
+      "expected_clock": "T+1"
     },
     {
       "symbol": "DOGO",
@@ -63,7 +65,8 @@
       "opponent": "Circular mid flow, not a crowd.",
       "kill": "Integrity WASH.",
       "expected_verdict": "FADE",
-      "expected_max_conviction": 0
+      "expected_max_conviction": 0,
+      "expected_clock": "T+2"
     },
     {
       "symbol": "CASHCAT",
@@ -83,7 +86,8 @@
       "opponent": "Early winners distributing into post-listing retail.",
       "kill": "Another $500k+ net-sell day with rising sell vol → stay TRIM.",
       "expected_verdict": "WATCH",
-      "expected_min_conviction": 2
+      "expected_min_conviction": 2,
+      "expected_clock": "T+2"
     },
     {
       "symbol": "STONKBROKER",
@@ -104,7 +108,8 @@
       "opponent": "NFT/activation demand vs ordinary DEX sellers — not a 99% net-buy farm.",
       "kill": "LP collapse or integrity flip to BUNDLE/WASH.",
       "expected_verdict": "WATCH",
-      "expected_min_conviction": 3
+      "expected_min_conviction": 3,
+      "expected_clock": "T-1"
     },
     {
       "symbol": "XST",
@@ -124,7 +129,8 @@
       "opponent": "A clustered holder set can sell into organic-looking mid flow.",
       "kill": "Any TAKE is forbidden while the public label is WARNING.",
       "expected_verdict": "WATCH",
-      "expected_min_conviction": 2
+      "expected_min_conviction": 2,
+      "expected_clock": "T+1"
     },
     {
       "symbol": "FRONG",
@@ -149,7 +155,8 @@
       "opponent": "Hot wallets rotating winners; retail not yet the only bid.",
       "kill": "Latest hour flips red or climax hour with negative net.",
       "expected_verdict": "TAKE",
-      "expected_min_conviction": 3
+      "expected_min_conviction": 3,
+      "expected_clock": "T-1"
     }
   ]
 }

@@ -25,7 +25,8 @@ Memecoins are **coordination + exit-liquidity** games:
 4. **Public pass** — DexScreener by **contract** + web search. Label EARLY / PRODUCT / CLIMAX / SILENCE / WARNING. Silence is a finding.
 5. **Opponent model** — One sentence: who is selling to whom?
 6. **Conviction 0–4** — integrity + ladder + story + opponent. This is the hand, not the RX number.
-7. **Verdict** — TAKE / WATCH / FADE only. No mushy "interesting."
+7. **AHEAD** — clock T-2…T+2, seat IN/BLINDS/OOP, and **Retail next** (what level-0 does in 6–24h). TAKE only in position.
+8. **Verdict** — TAKE / WATCH / FADE only. No mushy "interesting."
 
 ## Verdict definitions
 
@@ -60,6 +61,8 @@ Research only — not financial advice. "TAKE" means research priority, not a bu
 > Thesis: Uniswap designer minted the pools.trade teaser frog; that is a real Schelling object.  
 > Tape: yesterday's buyers still adding; small bids eating real offers (CLEAN).  
 > Public: The Defiant + Uniswap blog on pools.trade.  
+> Seat: IN at T-1  
+> Retail next: they show up when the lore hits more timelines; ladder is already there.  
 > Opponent: hot wallets rotating; retail not yet the only bid.
 
 ## Bad synthesis (anti-pattern)
