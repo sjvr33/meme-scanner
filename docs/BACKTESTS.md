@@ -129,6 +129,12 @@ Cohort = net-long FRONG Jul 30–31. Measured on CASHCAT Aug 1–6 vs VIRTUAL-ac
 
 FRONG winners punched ~2× trader share in buy USD into the reload; control collapsed. Production RH **8271471**.
 
+### INTEGRITY — bundle / wash (v2.4, Aug 14 2026)
+
+Floors without ceilings scored **HOOPLA** MES 85 / RX 65 / FLASH_IGNITION. Live Q-FLOW that evening: repeat **80.95%**, net-buy wallets **99.45%**, mid $0.39M buy / $3.49M sell, absorp **121.6**, addon **0**. Token dumped. **DOGO/MOW** mid buy ≈ mid sell with repeat < 1% (wash). **CASHCAT** 35/85 + addon 20% and **XST** 51/63 stayed in the organic band.
+
+Replay: `python3 scripts/replay_integrity.py` · spec: `core/scoring/INTEGRITY.md`
+
 ### Explored, not shipped
 
 - **Inverted low-vol FOMO** — too much launch spam (99% first-buyer days)

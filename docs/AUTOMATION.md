@@ -34,10 +34,11 @@ If an old automation named `RH Meme Scanner — Daily Digest` or `RH Meme Scanne
 
 Config source of truth: `chains/<chain>/config/query-ids.json`
 
-## Alpha layers (v2.3)
+## Alpha layers (v2.4)
 
+- **INTEGRITY** — bundle / wash veto on Q-FLOW (`core/scoring/INTEGRITY.md`)
 - **Q-REFLEX** — multi-day reloads (`core/scoring/REFLEX.md`)
-- **Q-FLASH** — same-day launches (`core/scoring/FLASH.md`)
+- **Q-FLASH** — same-day launches (`core/scoring/FLASH.md`); age ≤1d needs a second session
 - **Q-COHORT** — winner-wallet confirmation (RH)
 - **TABLE** — narrative/web congruence + TAKE/WATCH/FADE voice (`core/scoring/TABLE.md`)
 

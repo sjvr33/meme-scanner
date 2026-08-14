@@ -10,7 +10,7 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
                                    │
                     ┌──────────────▼──────────────────────┐
                     │           core/manifest.json         │
-                    │  MES × RX × FLASH × COHORT           │
+                    │  MES × RX × FLASH × COHORT × INTEGRITY│
                     └──────────────┬──────────────────────┘
            ┌───────────────────────┼───────────────────────┐
            │                       │                       │
@@ -32,7 +32,7 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 | Path | Purpose |
 |------|---------|
 | `core/manifest.json` | Registry: chains, connectors, **one** automation |
-| `core/scoring/` | MES, REFLEX, FLASH, EDGE, TABLE |
+| `core/scoring/` | MES, REFLEX, FLASH, INTEGRITY, EDGE, TABLE |
 | `core/connectors/` | Pluggable data source configs |
 | `chains/<id>/dune/` | Chain-specific SQL |
 | `chains/<id>/config/` | Query IDs, watchlist |
@@ -42,8 +42,8 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 ## Scoring pipeline
 
 1. **Discover** — top tokens by 24h vol per chain
-2. **Reactivate + Flow** — MES macro
-3. **Reflex (RX)** — microstructure (reload path)
+2. **Reactivate + Flow** — MES macro + integrity_label (bundle/wash)
+3. **Reflex (RX)** — microstructure (reload path); absorp+addon=0 is a SUSPECT tell
 4. **Flash** — hourly (same-day launch path)
 5. **Cohort** — winner-wallet overlap (RH confirmation)
 6. **Watch** — pinned + carry-forward

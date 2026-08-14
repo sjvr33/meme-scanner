@@ -43,6 +43,8 @@ Validated on CASHCAT Aug 1–8 2026 (see `docs/BACKTESTS.md`).
 **Volume without RX ≥ 65 is not a setup.**  
 TOAD-style dumps can print $40M vol with weak absorption + negative net → RX stays subdued or fails the net gate.
 
+**Absorption without addon is not a floor.** Absorp ≥ 20 with addon = 0 and a huge first-time-buyer print (HOOPLA 121.6 / 0% / 2800) is one-way inventory, not a ladder. INTEGRITY marks that SUSPECT / BUNDLE — do not treat it as RX alpha.
+
 ## How RX combines with MES
 
 ```

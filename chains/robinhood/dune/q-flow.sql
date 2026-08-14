@@ -1,4 +1,4 @@
--- Q-FLOW: Size-bucket flow + repeat buyer quality for top RH chain tokens (last 48h)
+-- Q-FLOW: Size-bucket flow + repeat buyer quality + integrity flags (48h)
 -- Focuses on tokens with meaningful 24h volume
 
 WITH excluded AS (
@@ -97,6 +97,36 @@ quality AS (
     FROM trader_stats
     GROUP BY 1
 ),
+mid_flow AS (
+    SELECT
+        token_address,
+        SUM(CASE WHEN side = 'buy' THEN usd ELSE 0 END) AS mid_buy_usd,
+        SUM(CASE WHEN side = 'sell' THEN usd ELSE 0 END) AS mid_sell_usd
+    FROM bucket_agg
+    WHERE size_bucket = 'mid_1k-10k'
+    GROUP BY 1
+),
+scored AS (
+    SELECT
+        q.*,
+        mf.mid_buy_usd,
+        mf.mid_sell_usd,
+        100.0 * ABS(COALESCE(mf.mid_buy_usd, 0) - COALESCE(mf.mid_sell_usd, 0))
+            / NULLIF(GREATEST(COALESCE(mf.mid_buy_usd, 0), COALESCE(mf.mid_sell_usd, 0)), 0)
+            AS mid_imbalance_pct,
+        CASE
+            WHEN q.repeat_buyer_pct < 2
+                 AND (COALESCE(mf.mid_buy_usd, 0) + COALESCE(mf.mid_sell_usd, 0)) >= 1000000
+                 AND 100.0 * ABS(COALESCE(mf.mid_buy_usd, 0) - COALESCE(mf.mid_sell_usd, 0))
+                     / NULLIF(GREATEST(COALESCE(mf.mid_buy_usd, 0), COALESCE(mf.mid_sell_usd, 0)), 0) < 5
+                THEN 'WASH'
+            WHEN q.net_buy_wallet_pct >= 95 THEN 'BUNDLE'
+            WHEN q.net_buy_wallet_pct >= 90 AND q.repeat_buyer_pct >= 70 THEN 'SUSPECT'
+            ELSE 'CLEAN'
+        END AS integrity_label
+    FROM quality q
+    LEFT JOIN mid_flow mf ON q.token_address = mf.token_address
+),
 meta AS (
     SELECT contract_address, MAX(symbol) AS symbol
     FROM tokens.erc20 WHERE blockchain = 'robinhood'
@@ -112,21 +142,29 @@ SELECT
     b.n_trades,
     NULL AS repeat_buyer_pct,
     NULL AS net_buy_wallet_pct,
-    NULL AS net_usd_48h
+    NULL AS net_usd_48h,
+    CAST(NULL AS VARCHAR) AS integrity_label,
+    CAST(NULL AS DOUBLE) AS mid_buy_usd,
+    CAST(NULL AS DOUBLE) AS mid_sell_usd,
+    CAST(NULL AS DOUBLE) AS mid_imbalance_pct
 FROM bucket_agg b
 LEFT JOIN meta m ON b.token_address = m.contract_address
 UNION ALL
 SELECT
     'quality' AS section,
-    q.token_address,
+    s.token_address,
     m.symbol,
     'summary' AS metric,
     NULL AS side,
     NULL AS value_usd,
-    q.unique_traders AS n_trades,
-    q.repeat_buyer_pct,
-    q.net_buy_wallet_pct,
-    q.net_usd_48h
-FROM quality q
-LEFT JOIN meta m ON q.token_address = m.contract_address
+    s.unique_traders AS n_trades,
+    s.repeat_buyer_pct,
+    s.net_buy_wallet_pct,
+    s.net_usd_48h,
+    s.integrity_label,
+    s.mid_buy_usd,
+    s.mid_sell_usd,
+    s.mid_imbalance_pct
+FROM scored s
+LEFT JOIN meta m ON s.token_address = m.contract_address
 ORDER BY section, token_address, metric, side

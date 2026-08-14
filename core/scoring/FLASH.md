@@ -36,6 +36,8 @@ Also emit `flash_score` 0–100 (hot hours × 30 + warm × 10 + latest boost + s
 - Prefer FLASH when token age / prior tape is thin (NEW / flash path).
 - SOL Q-FLASH applies `net_12h > −$500k` soft dump filter.
 - High FLASH + negative latest_net → treat as climax risk (same anti-TOAD spirit as RX).
+- **Integrity first** (`INTEGRITY.md`): BUNDLE / WASH / SUSPECT on age ≤2d **cannot** be flash HIGH CONVICTION or PLAY. HOOPLA was FLASH_IGNITION + MES 85 with 99% net-buy wallets.
+- **Second session (age ≤ 1d):** first FLASH_IGNITION print is WATCH only if CLEAN. TAKE / flash HC requires still on FLASH **and** still net-green 6–12h later. Morning ignition that is off-board by evening, or price up + day net red → FADE.
 
 ### Queries
 
@@ -96,8 +98,11 @@ Path A — Reload (multi-day):  MES × RX          → primary
 Path B — Flash (same-day):    FLASH band        → primary; RX may be empty/MIXED
 Path C — Confirmation:        COHORT_HOT/WARM   → boosts Path A conviction
 
-HIGH CONVICTION if:
-  (MES≥60 AND RX≥80)                           -- classic
-  OR (FLASH_IGNITION AND latest_net>0 AND MES≥50) -- flash path
+HIGH CONVICTION if integrity CLEAN AND:
+   (MES≥60 AND RX≥80)                           -- classic
+  OR (FLASH_IGNITION AND latest_net>0 AND MES≥50
+      AND (age>1d OR second session still net-green)) -- flash path
   OR (MES≥60 AND RX≥65 AND COHORT_HOT)         -- cohort-boosted warming
 ```
+
+BUNDLE / WASH / first-session day-0 FLASH never reach this block.

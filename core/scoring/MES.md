@@ -20,8 +20,8 @@ MES = macro attention/demand. RX = microstructure ladder before parabolic.
 | Net-buy streak | +15 | 2+ consecutive net-buy days |
 | New holder slope | +15 | 3-day new receivers rising |
 | Chain share | +15 | Top-5 share OR share rising 2 days |
-| Repeat buyers | +15 | `repeat_buyer_pct > 25%` (from Q-FLOW) |
-| Net-buy wallets | +15 | `net_buy_wallet_pct > 40%` (from Q-FLOW) |
+| Repeat buyers | +15 | `repeat_buyer_pct > 25%` **and** `< 70%` (from Q-FLOW). Skip if integrity ≠ CLEAN. |
+| Net-buy wallets | +15 | `net_buy_wallet_pct > 40%` **and** `< 90%` (from Q-FLOW). Skip if ≥ 90% (bundle breadth). |
 | Compression → spike | +10 | Prior 5d low vol then 3×+ spike |
 
 ## NEW scoring (0–100)
@@ -46,6 +46,8 @@ MES = macro attention/demand. RX = microstructure ladder before parabolic.
 | < 60 | any | SKIP (unless watched) | Omit |
 
 Never alert IGNITION on volume alone. RX is the alpha gate.
+
+**Integrity veto** (`core/scoring/INTEGRITY.md`): BUNDLE / WASH → MES cap 45, never HIGH CONVICTION / PLAY. Do not award the +15s when the same metric is in the farm/wash tail (HOOPLA: repeat 81%, net-buy wallets 99%).
 
 ## Watchlist verdicts (Q-WATCH)
 

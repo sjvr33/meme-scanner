@@ -40,9 +40,15 @@ Daily RX is too slow for same-day launches. **Q-FLASH** scores the last 12h hour
 
 | Signal | Why it matters |
 |--------|----------------|
-| Repeat buyer % | Organic interest vs one-shot bots |
-| Net-buy wallet % | Breadth of demand |
-| Size buckets | Retail vs whale composition |
+| Repeat buyer % | Organic interest vs one-shot bots — **ceiling 70% on NEW** |
+| Net-buy wallet % | Breadth of demand — **ceiling 90%** (99% is a bundle, not breadth) |
+| Size buckets | Retail vs whale composition; mid buy ≈ mid sell = wash |
+
+### Layer 1e — Integrity veto (Q-FLOW + RX) ★ HARD GATE
+
+Floors without ceilings scored HOOPLA as ignition. **BUNDLE** (net-buy wallets ≥ 95%), **WASH** (repeat < 2% + mid symmetry), and **SUSPECT** (high absorp + addon 0) cannot be PLAY / HIGH CONVICTION. Age ≤1d FLASH needs a second session. See `core/scoring/INTEGRITY.md`.
+
+**Validated (Aug 14):** HOOPLA 99.45% net-buy / absorp 121 / addon 0 → dump. DOGO/MOW mid buy = mid sell → wash. CASHCAT 35/85 + addon 20% and XST 51/63 stayed CLEAN.
 
 ### Layer 2 — Reactivation mode (Dune, live)
 

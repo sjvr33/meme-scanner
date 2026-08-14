@@ -11,7 +11,8 @@ Done when: each token has flow table, RX/FLASH read, verdict STARTER/WAIT/SKIP.
 
 ## Rules
 - Use Memories from the morning digest OR re-run Q-REFLEX + Q-FLASH + Q-WATCH
-- Scoring: `core/scoring/MES.md`, `REFLEX.md`, `FLASH.md`
+- Scoring: `core/scoring/MES.md`, `REFLEX.md`, `FLASH.md`, `INTEGRITY.md`
+- BUNDLE / WASH / faded same-day FLASH cannot be STARTER
 - Never invent numbers. Cite query IDs.
 
 ## For each token

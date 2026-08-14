@@ -19,7 +19,7 @@ Memecoins are **coordination + exit-liquidity** games:
 
 ## Read order (mandatory)
 
-1. **On-chain first** — MES, RX, FLASH, COHORT gates (see FLASH.md). If the gate fails, do not invent a bullish story from Twitter.
+1. **On-chain first** — INTEGRITY, then MES, RX, FLASH, COHORT (see INTEGRITY.md + FLASH.md). Bundle / wash / faded same-day FLASH → FADE. If the gate fails, do not invent a bullish story from Twitter.
 2. **Identity** — Resolve symbol / name from DexScreener, explorer, or web if Dune says UNNAMED. Never leave "RH UNNAMED" in Slack without a human label if one exists.
 3. **Narrative pass** — For every token that survives into PLAYS or PASSES (top traps), search the web + social chatter:
    - What is the *story* people are coordinating on?
@@ -35,7 +35,7 @@ Memecoins are **coordination + exit-liquidity** games:
 |---------|---------|
 | **TAKE** | Asymmetric: on-chain ignition + narrative not yet fully priced / not climax. Thin edge you would press small. |
 | **WATCH** | Missing one piece (MES lag, RX warming, narrative unclear, same-day flash needs next print). Do not chase. |
-| **FADE** | High attention / high vol, weak absorption, climax net-sell, or narrative is exit liquidity theater. Fold. |
+| **FADE** | High attention / high vol, weak absorption, climax net-sell, bundle/wash integrity fail, or narrative is exit liquidity theater. Fold. |
 
 Research only — not financial advice. "TAKE" means research priority, not a buy order.
 
@@ -46,6 +46,15 @@ Research only — not financial advice. "TAKE" means research priority, not a bu
 - Hedging every sentence into uselessness ("could go either way")
 - Moral / political framing
 - Treating social buzz as alpha when net_usd is deeply red
+
+## Opponent tells (integrity)
+
+| Print | Opponent | Call |
+|-------|----------|------|
+| Net-buy wallets ≥ 95% + addon 0 | Bundled inventory walking the book; retail is the bid | FADE |
+| Repeat < 2% and mid buy ≈ mid sell | Wash / circular mid flow | FADE |
+| Absorp ≥ 20 with almost no whale sells | Fake floor — sells never hit the tape | FADE |
+| Repeat 25–50%, net-buy wallets 40–85%, addon > 0 | Organic reload / ladder | Score normally |
 
 ## Good synthesis (pattern)
 
