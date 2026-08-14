@@ -77,22 +77,24 @@ Count **legs**. A leg is a yes/no from a *different* evidence class.
 
 RX 100 with 1 leg is still a fade. FRONG-style TAKE is 3–4 legs (clean tape + Uniswap frog lore + early cohort + opponent = hot wallets rotating, not a bundle).
 
-## Thesis card (required shape)
+## Slack rundown (required shape)
 
-Every PLAY / PASS / WATCHED name gets this. Fail the run if any PLAY is missing Thesis or Public.
+Write like an expert who trades these markets — not a labeled form. Fail the run if any PLAY is a scoreboard or uses internal codes (MES, RX, T-2, OOP, conviction n/4).
 
 ```
-• [CHAIN] TICKER — TAKE|WATCH|FADE · path …
-  Thesis: [2 sentences a human can argue with. No score names required.]
-  Tape: [decoded microstructure in English] (integrity …)
-  Public: [what the internet/DexScreener says + URL or "silence"]
-  Seat: [IN|BLINDS|OOP] at [T-2|T-1|T0|T+1|T+2]  — AHEAD.md
-  Retail next: [what level-0 does in 6–24h]
-  Opponent: [who buys from whom now]
-  Kill: [concrete abort]
-  Conviction: n/4 — [which legs]
-  `address`
+RH FRONG — I'd take a small look
+
+[what it is, in two sentences]
+
+[what the tape is doing, plus what the internet says about this contract]
+
+[what retail does next, and who is on the other side]
+
+I'm out if [concrete abort].
+`address`
 ```
+
+Calls in English only: **I'd take a small look** / **I'm watching — not pressing** / **I'd pass**.
 
 ## Worked examples (Aug 14 2026 — cited)
 

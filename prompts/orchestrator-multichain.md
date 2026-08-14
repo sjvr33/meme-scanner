@@ -92,48 +92,49 @@ Per chain: watchlist (symbol, address, MES, RX, label, verdict), graduated, kill
 
 ---
 
-## Phase 7 — SLACK OUTPUT (one message — synthesis, not spreadsheet)
+## Phase 7 — SLACK OUTPUT (a trader's rundown, not a scoreboard)
 
-Use this shape. Prefer **≤3 PLAYS**, **≤5 PASSES**. Max ~15 tokens total.
+Write like a human who trades these tapes for a living. First person is fine ("I'd pass", "I'm watching"). Prefer **≤3 PLAYS**, **≤5 PASSES**.
+
+**Never put these in Slack:** MES, RX, FLASH_IGNITION, T-2, T-1, T0, T+1, T+2, OOP, BLINDS, conviction n/4, integrity BUNDLE. Those are internal. Say what they *mean*.
+
+Each name is 4–6 short sentences:
+
+1. **Call** — I'd take a small look / I'm watching — not pressing / I'd pass
+2. **What it is** — the story for *this contract*, or that there isn't one
+3. **What the tape is doing** — in English (people coming back vs farm vs wash)
+4. **What retail does next** — and whether you want that bid behind you
+5. **When you're wrong** — one concrete abort
+6. Address
 
 ---
-🔍 Meme Scanner — [DATE] — Table Read
+🔍 Meme Scanner — [DATE]
 Research only — not financial advice.
 
-🧠 TABLE
-[2–4 sentences: regime, where edge lives, who is bluffing with volume]
+[2–4 sentences on the table tonight: where the real game is, who is bluffing with volume]
 
-♠️ PLAYS (TAKE or WATCH only — max 3)
-• **[CHAIN] TICKER** — **TAKE|WATCH** · path RELOAD|FLASH|COHORT · conviction n/4
-  Thesis: [2 English sentences — no score names required]
-  Tape: [decoded microstructure] (integrity …)
-  Public: [DexScreener/web finding + URL or "silence for this contract"]
-  Seat: [IN|BLINDS|OOP] at [T-2|T-1|T0|T+1|T+2]
-  Retail next: [what level-0 does in 6–24h — are we in front of that bid or selling into it?]
-  Opponent: [who buys from whom now]
-  Kill: [concrete abort]
-  `address`
+I'd take a small look
+• **RH FRONG**
+A Uniswap designer minted the launchpad's teaser frog before the product went live. That's a real thing people can coordinate on, and yesterday's buyers are still adding — not a farm.
+Retail will show up when more timelines pick up the lore. I want that bid behind me.
+I'm out if the next few hours flip net-red.
+`0x6245…`
 
-🚫 PASSES (FADE — loud traps / weak hands)
-• **[CHAIN] TICKER** — **FADE** · conviction n/4
-  Thesis: [why the table is wrong, in English]
-  Public: [URL or silence]
-  `address`
+I'd pass
+• **RH HOOPLA**
+No website, no socials, and almost every wallet was a "buyer" because the sell side was hidden. By evening the pool was empty.
+Retail already chased the morning pop. That was the exit.
+`0x6713…`
 
-📌 WATCHED
-• **[CHAIN] TICKER** — [TRIM|HOLD|ABORT] · conviction n/4 — [English tape + public in one line] — `address`
+[watched names in the same voice — one short paragraph each]
 
-⚠️ KILLS
-• [only if triggered]
-
-🔗 RH reflex 8271348 · flash 8271470 · cohort 8271471 · SOL reflex 8271349 · flash 8271473
-Gate: @core/scoring/AHEAD.md · @core/scoring/THESIS.md · @core/scoring/INTEGRITY.md · @core/scoring/FLASH.md
+🔗 RH 8271348 / 8271470 / 8271471 · SOL 8271349 / 8271473
 ---
 
 ### Quality bar (fail the run if violated)
 
-- If a PLAY has no Thesis + Public + Seat + Retail next + Opponent + Conviction → rewrite before posting.
-- If Slack looks like "MES 85 · RX 80 · FLASH n/a" with no prose → rewrite.
-- If Public is missing or is only the ticker with no contract check → rewrite.
-- Zero PLAYS is valid — say the table is dead / only fades.
+- If a name is a row of scores or codes → rewrite.
+- If you cannot say what you would *do* (look / watch / pass) → rewrite.
+- If Public/contract was not checked → rewrite.
+- Zero looks is valid — say the table is dead.
 - Be opinionated. Hedging every call into mush is a failure mode.

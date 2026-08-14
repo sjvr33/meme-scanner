@@ -57,19 +57,16 @@ Research only — not financial advice. "TAKE" means research priority, not a bu
 
 ## Good synthesis (pattern)
 
-> **FRONG — TAKE · conviction 4/4**  
-> Thesis: Uniswap designer minted the pools.trade teaser frog; that is a real Schelling object.  
-> Tape: yesterday's buyers still adding; small bids eating real offers (CLEAN).  
-> Public: The Defiant + Uniswap blog on pools.trade.  
-> Seat: IN at T-1  
-> Retail next: they show up when the lore hits more timelines; ladder is already there.  
-> Opponent: hot wallets rotating; retail not yet the only bid.
+> **RH FRONG — I'd take a small look**  
+> A Uniswap designer minted the launchpad's teaser frog before the product went live. That's a real story, and yesterday's buyers are still adding.  
+> Retail will show up when more timelines pick up the lore. I want that bid behind me.  
+> I'm out if the next few hours flip net-red.
 
 ## Bad synthesis (anti-pattern)
 
-> RH FRONG — MES 70 · RX 65 · FLASH 100 · COHORT_WARM — 0x6245…
+> RH FRONG — MES 70 · RX 65 · FLASH 100 · T-1 IN · conviction 4/4
 
-That is a scoreboard, not a read. See `THESIS.md`.
+That is a scoreboard. An expert does not talk like that. See `THESIS.md`.
 
 ## Example table read (shape only)
 
@@ -78,15 +75,13 @@ That is a scoreboard, not a read. See `THESIS.md`.
 SOL tape is loud and red — TOAD/Jimothy/CATE are paying exit liquidity.
 Real hands forming on RH flash/reload prints, not on SOL volume leaders.
 
-♠️ PLAYS
-• RH FRONG — WATCH · path FLASH · conviction 3/4
-  Thesis: Uniswap teaser-frog lore is a real Schelling object; wait for the next print.
-  Tape: latest hour still net-buy; yesterday's buyers adding (CLEAN)
-  Public: The Defiant on pools.trade / FRONG
-  Opponent: hot wallets rotating winners; retail not yet the only bid
-  Kill: latest hour flips red
-  `0x6245…`
+I'd take a small look
+• RH FRONG
+Uniswap teaser-frog lore is a real story; wait for the next print if you just missed the hour. Yesterday's buyers are still adding.
+Retail isn't the only bid yet. I'm out if the next hour flips red.
+`0x6245…`
 
-🚫 PASSES
-• SOL TOAD — FADE — $40M vol with −$13M net is distribution theater, not ignition
+I'd pass
+• SOL TOAD
+Forty million of volume with thirteen million leaving is someone cashing chips, not a launch.
 ```

@@ -54,9 +54,21 @@ CASHCAT's edge was T-2/T-1 on Aug 3–5. Aug 6 was T+2 — loudest volume, worst
 
 **TAKE requires IN POSITION (T-2 or T-1) plus THESIS TAKE rules.** T0/T+1/T+2 cannot be TAKE. That is how you stay ahead of retail instead of next to them.
 
-## Mandatory Slack line: Retail next
+## Slack voice (no codes)
 
-One sentence. What will level-0 do in the next 6–24h, and do we want that bid behind us or in front of us?
+Never write T-2, T+1, OOP, BLINDS, or "IN POSITION" in Slack. Those are for the engine.
+
+Say it like a trader:
+
+- T-2 → "Almost nobody is looking at this yet."
+- T-1 → "The sharp money is already here; the crowd isn't."
+- T0 → "This is the first loud print — wait."
+- T+1 → "The crowd is the bid right now."
+- T+2 → "The headline already happened. That's the end, not the start."
+
+## What retail does next
+
+One sentence in the rundown. What will the crowd do in the next 6–24h, and do we want that bid behind us or in front of us?
 
 | Clock | Retail next (shape) |
 |-------|---------------------|

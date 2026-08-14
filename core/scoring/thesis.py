@@ -11,6 +11,12 @@ ABSORP_LADDER_LO = 1.2
 ABSORP_LADDER_HI = 8.0
 STORY_LEGS = frozenset({"EARLY", "PRODUCT"})
 
+STANCE = {
+    "TAKE": "I'd take a small look",
+    "WATCH": "I'm watching — not pressing",
+    "FADE": "I'd pass",
+}
+
 
 def decode_tape(row: dict[str, Any], integrity: dict[str, Any]) -> str:
     label = integrity["label"]
@@ -33,7 +39,7 @@ def decode_tape(row: dict[str, Any], integrity: dict[str, Any]) -> str:
         parts.append("small bids are eating real offers")
     if not parts:
         parts.append("flow is two-sided and not a farm print")
-    return "Organic tape: " + ", ".join(parts) + "."
+    return "The flow looks real: " + ", ".join(parts) + "."
 
 
 def conviction_legs(row: dict[str, Any], integrity: dict[str, Any]) -> list[str]:
@@ -112,4 +118,63 @@ def card(row: dict[str, Any]) -> dict[str, Any]:
         "in_position": ahead["in_position"],
         "verdict": slack_verdict(row, integrity, legs, ahead),
         "can_play": integrity["can_play"],
+        "stance": STANCE[slack_verdict(row, integrity, legs, ahead)],
     }
+
+
+FORBIDDEN_IN_SLACK = (
+    "T-2",
+    "T-1",
+    "T+1",
+    "T+2",
+    " T0",
+    "OOP",
+    "BLINDS",
+    "MES ",
+    "RX ",
+    "FLASH_IGNITION",
+    "HIGH CONVICTION",
+    "n/4",
+    "integrity BUNDLE",
+    "integrity WASH",
+    "integrity CLEAN",
+)
+
+
+def _exit_line(kill: str) -> str:
+    text = (kill or "").strip()
+    if not text:
+        return "I'm out if the next session flips against the idea."
+    lower = text.lower()
+    if lower.startswith("already") or lower.startswith("i'm out") or lower.startswith("i would"):
+        return text
+    if lower.startswith("integrity"):
+        return "I wouldn't put risk on this."
+    if lower.startswith("any take"):
+        return text
+    return "I'm out if " + text[0].lower() + text[1:]
+
+
+def rundown(row: dict[str, Any] | None = None, result: dict[str, Any] | None = None) -> str:
+    """Human trader note. No clock codes, no score names."""
+    result = result or card(row or {})
+    chain = (result.get("chain") or "").upper()
+    symbol = result.get("symbol") or "?"
+    return (
+        f"{chain} {symbol} — {result['stance']}\n\n"
+        f"{result['thesis'].rstrip()}\n\n"
+        f"{result['tape']} {result['public']}\n\n"
+        f"{result['retail_next']} {result['opponent']}\n\n"
+        f"{_exit_line(result.get('kill') or '')}\n\n"
+        f"`{result.get('address') or ''}`\n"
+    )
+
+
+def slack_is_cryptic(text: str) -> list[str]:
+    import re
+
+    hits: list[str] = []
+    for token in FORBIDDEN_IN_SLACK:
+        if re.search(rf"(?<![A-Za-z0-9]){re.escape(token.strip())}(?![A-Za-z0-9])", text):
+            hits.append(token.strip())
+    return hits

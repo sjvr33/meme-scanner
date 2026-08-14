@@ -27,7 +27,7 @@ For each candidate (English first — see `core/scoring/THESIS.md`):
 - **tape_sentence** — decoded microstructure (not "RX 65")
 - DexScreener: MC, LP, websites[], socials[] if you can fetch
 - public_label: EARLY | PRODUCT | CLIMAX | SILENCE | WARNING
-- clock T-2…T+2 + seat IN/BLINDS/OOP + one-line retail next (`AHEAD.md`)
+- one-line retail next in English (no T-2 / OOP codes)
 - 1 cited URL or "silence for this contract"
 BUNDLE / WASH / SUSPECT (age ≤2d) cannot be HIGH CONVICTION.
 Never invent numbers. Research only.
