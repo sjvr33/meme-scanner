@@ -51,7 +51,8 @@ Do these in order. Cite URLs. If a step fails, say so — do not invent a story.
 | Label | When | Effect on conviction |
 |-------|------|----------------------|
 | **EARLY** | Fresh Schelling, thin chatter, product/lore exists, not on every timeline yet | +1 story leg |
-| **CLIMAX** | Listing day, "up 150% in 15h", KOLs everywhere | 0 — story is priced |
+| **FLAGSHIP** | The chain's book — pinned in `chains/<id>/config/book.json` | +1 story leg. Stance is **HOLD** if CLEAN. A listing spike is "don't chase," not "sell." |
+| **CLIMAX** | Same-day fireworks / a one-off headline on a *flip*, not the book | 0 — story is priced. Do **not** put the book here. |
 | **SILENCE** | No website, no socials, no news for *this* contract | 0 — no coordination object |
 | **WARNING** | Rug / bundle / 70%+ clustered supply / impersonation articles | 0 — and downgrade WATCH→FADE if integrity was the only green leg |
 | **PRODUCT** | Real site + docs (not just a meme jpg) | +1 story leg if tape is CLEAN |
@@ -66,7 +67,7 @@ Count **legs**. A leg is a yes/no from a *different* evidence class.
 |---|-----|----------|
 | 1 | **Integrity** | Q-FLOW label CLEAN |
 | 2 | **Ladder** | Addon > 0 and absorp in ~1.2–8 (or FLASH still net-green on session 2) |
-| 3 | **Story** | Public label EARLY or PRODUCT |
+| 3 | **Story** | Public label EARLY, PRODUCT, or FLAGSHIP |
 | 4 | **Opponent** | You can name who is selling to whom, and it is *not* "retail is the only bid" |
 
 | Legs | Max Slack | Meaning |
@@ -94,7 +95,9 @@ I'm out if [concrete abort].
 `address`
 ```
 
-Calls in English only: **I'd take a small look** / **I'm watching — not pressing** / **I'd pass**.
+Calls in English only: **I'd hold this — I'm not hopping** / **I'd take a small look** / **I'm watching — not pressing** / **I'd pass**.
+
+The book (`book.json`) is named first. A look is a satellite. Selling the book to chase a look is a failure mode.
 
 ## Worked examples (Aug 14 2026 — cited)
 
@@ -104,9 +107,9 @@ Public: DexScreener `websites: []` `socials: []`. Web search hits a *different* 
 Tape: 99.45% net-buy wallets, addon 0, absorp 121 = fake floor.  
 https://dexscreener.com/robinhood/0xb4d0eb61e1602593e5aa230a3a0eedbdb9ac4b02
 
-**CASHCAT** `0x020bfc65…18b4` — TRIM / not a new TAKE, conviction 2/4 (integrity + opponent)  
-Thesis: The chain's flagship cat, named after a brand Robinhood rejected. Robinhood listed it in the app on Aug 6; that listing is the climax, not the setup. Tonight the tape is organic but net-red — winners distributing into the story everyone already knows.  
-Public: Coinsprobe / Gate / Optimisus on the Aug 6 listing; site calls it "fan fiction with a ticker."  
+**CASHCAT** `0x020bfc65…18b4` — **HOLD**, the book  
+Thesis: This is the chain's cat. The Aug 6 listing was a day not to chase size. It is not a reason to sell. Organic tape + a real site. I hold it. I do not hop to FRONG or the next FLASH print.  
+Kill: farm print or the pool dies — not "another red day."  
 https://coinsprobe.com/robinhood-lists-cashcat-memecoin-jumps-sharply-on-official-announcement/
 
 **STONKBROKER** `0xe934e36a…bf50` — WATCH, conviction 3/4 (integrity + ladder + product). MES gate not met → not TAKE.  

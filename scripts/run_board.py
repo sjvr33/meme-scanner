@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from core.scoring.book import book_entry  # noqa: E402
 from core.scoring.thesis import card, rundown, slack_is_cryptic  # noqa: E402
 
 SKIP_SYMBOLS = frozenset(
@@ -97,10 +98,15 @@ def row_from_flow(raw: dict, dex: dict, override: dict | None, reflex: dict | No
     symbol = raw.get("symbol") or dex.get("symbol") or "?"
     address = raw.get("token_address") or raw.get("mint") or raw.get("address")
     public_label, public = infer_public(dex, override)
+    book = book_entry({"symbol": symbol, "address": address, "chain": raw.get("chain") or "robinhood"})
+    if book and not (override or {}).get("public_label"):
+        public_label = "FLAGSHIP"
     rx = reflex or {}
     thesis = (override or {}).get("thesis")
     if not thesis:
-        if public_label == "SILENCE":
+        if public_label == "FLAGSHIP" or book:
+            thesis = f"{symbol} is the book on this chain. A red day is not a sell. I do not hop."
+        elif public_label == "SILENCE":
             thesis = f"{symbol} has no public page for this contract. Treat the tape as the only story."
         elif public_label == "WARNING":
             thesis = f"{symbol} has a public concentration or scam warning. Flow can look fine while the float is not."
@@ -133,8 +139,14 @@ def row_from_flow(raw: dict, dex: dict, override: dict | None, reflex: dict | No
         or ("Retail is the only bid." if public_label in {"SILENCE", "CLIMAX", "WARNING"} else "Two-sided book — not obviously a farm."),
         "opponent_class": (override or {}).get("opponent_class")
         or ("retail_only_bid" if public_label in {"SILENCE", "CLIMAX"} else "mixed"),
-        "kill": (override or {}).get("kill") or "the next session flips against the idea.",
+        "kill": (override or {}).get("kill")
+        or (
+            "I only sell if this starts printing like a farm or the pool dies."
+            if book or public_label == "FLAGSHIP"
+            else "the next session flips against the idea."
+        ),
         "mes_ok": (override or {}).get("mes_ok", False),
+        "horizon": (override or {}).get("horizon") or ("hold" if book or public_label == "FLAGSHIP" else "trade"),
     }
 
 

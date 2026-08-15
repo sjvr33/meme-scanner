@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
+from core.scoring.book import is_hold
+
 RETAIL_NEXT = {
     "T-2": "Retail has not seen this ticker yet. If it prints green on DexScreener they will chase — we want that bid later, not as tonight's exit.",
     "T-1": "Smart wallets are already here. Retail follows the leftovers in 12–24h.",
@@ -11,6 +13,11 @@ RETAIL_NEXT = {
     "T+1": "Retail is the bid right now. Someone is exiting into them.",
     "T+2": "Retail thinks the listing or headline is the start. It is the end.",
 }
+
+HOLD_RETAIL_NEXT = (
+    "Retail will treat a red day or a listing retrace as a reason to sell the book "
+    "and hop. That is how they never keep a position."
+)
 
 IN_POSITION = frozenset({"T-2", "T-1"})
 
@@ -29,6 +36,8 @@ def clock_and_seat(row: dict[str, Any], integrity_label: str) -> dict[str, Any]:
     )
     flash_died = still is False and "FLASH" in flash
 
+    hold = is_hold(row)
+
     if integrity_label in {"BUNDLE", "WASH"}:
         if public == "CLIMAX":
             clock = "T+2"
@@ -37,6 +46,8 @@ def clock_and_seat(row: dict[str, Any], integrity_label: str) -> dict[str, Any]:
         else:
             clock = "T0"
         seat = "OOP"
+    elif hold and integrity_label == "CLEAN":
+        clock, seat = "T-1", "IN"
     elif public == "CLIMAX":
         clock, seat = "T+2", "OOP"
     elif public == "WARNING":
@@ -56,5 +67,6 @@ def clock_and_seat(row: dict[str, Any], integrity_label: str) -> dict[str, Any]:
         "clock": clock,
         "seat": seat,
         "in_position": clock in IN_POSITION and seat == "IN",
-        "retail_next": row.get("retail_next") or RETAIL_NEXT[clock],
+        "retail_next": row.get("retail_next")
+        or (HOLD_RETAIL_NEXT if hold and integrity_label == "CLEAN" else RETAIL_NEXT[clock]),
     }

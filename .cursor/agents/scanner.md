@@ -26,7 +26,8 @@ For each candidate (English first — see `core/scoring/THESIS.md`):
 - symbol, address, integrity_label
 - **tape_sentence** — decoded microstructure (not "RX 65")
 - DexScreener: MC, LP, websites[], socials[] if you can fetch
-- public_label: EARLY | PRODUCT | CLIMAX | SILENCE | WARNING
+- public_label: EARLY | FLAGSHIP | PRODUCT | CLIMAX | SILENCE | WARNING
+- If the address is in `chains/<chain>/config/book.json`, mark FLAGSHIP / HOLD — do not fade a red day
 - one-line retail next in English (no T-2 / OOP codes)
 - 1 cited URL or "silence for this contract"
 BUNDLE / WASH / SUSPECT (age ≤2d) cannot be HIGH CONVICTION.

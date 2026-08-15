@@ -43,6 +43,12 @@ def main() -> int:
         cryptic = slack_is_cryptic(text)
         if cryptic:
             failures.append(f"{row['symbol']}: cryptic Slack {cryptic}")
+        for needle in row.get("expected_present") or []:
+            if needle not in text:
+                failures.append(f"{row['symbol']}: missing {needle!r}")
+        for needle in row.get("expected_absent") or []:
+            if needle in text:
+                failures.append(f"{row['symbol']}: should not say {needle!r}")
 
     if failures:
         print("FAIL")

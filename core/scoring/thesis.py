@@ -5,15 +5,17 @@ from __future__ import annotations
 from typing import Any
 
 from core.scoring.ahead import clock_and_seat
+from core.scoring.book import is_hold
 from core.scoring.integrity import classify as classify_integrity
 
 ABSORP_LADDER_LO = 1.2
 ABSORP_LADDER_HI = 8.0
-STORY_LEGS = frozenset({"EARLY", "PRODUCT"})
+STORY_LEGS = frozenset({"EARLY", "PRODUCT", "FLAGSHIP"})
 
 STANCE = {
     "TAKE": "I'd take a small look",
     "WATCH": "I'm watching — not pressing",
+    "HOLD": "I'd hold this — I'm not hopping",
     "FADE": "I'd pass",
 }
 
@@ -79,6 +81,8 @@ def slack_verdict(
     public = (row.get("public_label") or "").upper()
     if integrity["verdict"] == "FADE" or integrity["label"] in {"BUNDLE", "WASH"}:
         return "FADE"
+    if is_hold(row) and integrity["label"] == "CLEAN":
+        return "HOLD"
     n = len(legs)
     take_ok = (
         integrity["can_play"]
@@ -141,11 +145,17 @@ FORBIDDEN_IN_SLACK = (
 )
 
 
-def _exit_line(kill: str) -> str:
+def _exit_line(kill: str, verdict: str = "") -> str:
     text = (kill or "").strip()
+    lower = text.lower()
+    if verdict == "HOLD":
+        if not text:
+            return "I only sell if this starts printing like a farm or the pool dies."
+        if lower.startswith("i only sell") or lower.startswith("i hold") or lower.startswith("i'd hold"):
+            return text
+        return "I only sell if " + text[0].lower() + text[1:]
     if not text:
         return "I'm out if the next session flips against the idea."
-    lower = text.lower()
     if lower.startswith("already") or lower.startswith("i'm out") or lower.startswith("i would"):
         return text
     if lower.startswith("integrity"):
@@ -165,7 +175,7 @@ def rundown(row: dict[str, Any] | None = None, result: dict[str, Any] | None = N
         f"{result['thesis'].rstrip()}\n\n"
         f"{result['tape']} {result['public']}\n\n"
         f"{result['retail_next']} {result['opponent']}\n\n"
-        f"{_exit_line(result.get('kill') or '')}\n\n"
+        f"{_exit_line(result.get('kill') or '', result.get('verdict') or '')}\n\n"
         f"`{result.get('address') or ''}`\n"
     )
 

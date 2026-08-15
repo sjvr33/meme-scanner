@@ -93,13 +93,15 @@ Per chain: watchlist (symbol, address, MES, RX, label, verdict), graduated, kill
 
 ## Phase 7 — SLACK OUTPUT (a trader's rundown, not a scoreboard)
 
-Write like a human who trades these tapes for a living. First person is fine ("I'd pass", "I'm watching"). Prefer **≤3 PLAYS**, **≤5 PASSES**.
+Write like a human who trades these tapes for a living. First person is fine ("I'd hold", "I'd pass", "I'm watching"). Prefer **≤3 PLAYS**, **≤5 PASSES**.
+
+**The book first.** Read `chains/<id>/config/book.json`. CASHCAT is the Robinhood hold. Slack it as **I'd hold this — I'm not hopping** if the tape is still CLEAN. A listing retrace or a net-red day is not a sell. A look (FRONG, a FLASH print) is a satellite. Selling the book to chase a look is a failure mode. Hopping names is how this stack loses money.
 
 **Never put these in Slack:** MES, RX, FLASH_IGNITION, T-2, T-1, T0, T+1, T+2, OOP, BLINDS, conviction n/4, integrity BUNDLE. Those are internal. Say what they *mean*.
 
 Each name is 4–6 short sentences:
 
-1. **Call** — I'd take a small look / I'm watching — not pressing / I'd pass
+1. **Call** — I'd hold this — I'm not hopping / I'd take a small look / I'm watching — not pressing / I'd pass
 2. **What it is** — the story for *this contract*, or that there isn't one
 3. **What the tape is doing** — in English (people coming back vs farm vs wash)
 4. **What retail does next** — and whether you want that bid behind you
@@ -110,7 +112,13 @@ Each name is 4–6 short sentences:
 🔍 Meme Scanner — [DATE]
 Research only — not financial advice.
 
-[2–4 sentences on the table tonight: where the real game is, who is bluffing with volume]
+[2–4 sentences on the table tonight: where the real game is, who is bluffing with volume. Name the book.]
+
+I'd hold this — I'm not hopping
+• **RH CASHCAT**
+This is the chain's cat. The listing spike is priced. The tape is still a real book, not a farm. I hold it. I do not sell a red day to chase the next ticker.
+I only sell if this starts printing like a farm or the pool dies.
+`0x020bfc65…`
 
 I'd take a small look
 • **RH FRONG**
@@ -133,7 +141,8 @@ Retail already chased the morning pop. That was the exit.
 ### Quality bar (fail the run if violated)
 
 - If a name is a row of scores or codes → rewrite.
-- If you cannot say what you would *do* (look / watch / pass) → rewrite.
+- If you cannot say what you would *do* (hold / look / watch / pass) → rewrite.
+- If you fade the book because a day went red or a listing already printed → rewrite.
 - If Public/contract was not checked → rewrite.
 - Zero looks is valid — say the table is dead.
 - Be opinionated. Hedging every call into mush is a failure mode.

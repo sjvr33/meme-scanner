@@ -48,9 +48,11 @@ Every Slack name gets a clock. This is *when the information is*, not how good t
 | **T-1 SMART** | Winner wallets / second FLASH session. CT still thin. | COHORT or PRODUCT/EARLY + still net-green | **IN POSITION** |
 | **T0 BOARD** | DexScreener trending, first FLASH_IGNITION print | Age ≤1d fireworks | **BLINDS** — look, do not TAKE |
 | **T+1 CROWD** | CT / TikTok / KOLs. Retail *is* the bid. | WARNING, faded FLASH, farm pack | **OUT OF POSITION** |
-| **T+2 EXIT** | Listing, CoinGecko, app headline. Retail thinks this is the start. | CLIMAX (CASHCAT Aug 6) | **OUT OF POSITION** |
+| **T+2 EXIT** | Listing, CoinGecko, app headline on a *flip*. Retail thinks this is the start. | CLIMAX on a hop — not the book | **OUT OF POSITION** for *adds* |
 
-CASHCAT's edge was T-2/T-1 on Aug 3–5. Aug 6 was T+2 — loudest volume, worst seat. HOOPLA opened at T0 and was T+1 by evening. FRONG on Aug 13 was T-1 (lore + ladder, not yet the only retail bid).
+**The book is different.** CASHCAT is FLAGSHIP (`book.json`). Aug 6 was a bad day to *chase*. It was not a day to sell the hold. A FLAGSHIP that is CLEAN stays **HOLD** at T-1. Do not clock the book as T+2 just because a listing already printed.
+
+CASHCAT's *add* edge was T-2/T-1 on Aug 3–5. Aug 6 was a bad add. The position is still the book. HOOPLA opened at T0 and was T+1 by evening. FRONG on Aug 13 was a look, not a replacement for CASHCAT.
 
 **TAKE requires IN POSITION (T-2 or T-1) plus THESIS TAKE rules.** T0/T+1/T+2 cannot be TAKE. That is how you stay ahead of retail instead of next to them.
 
@@ -65,6 +67,7 @@ Say it like a trader:
 - T0 → "This is the first loud print — wait."
 - T+1 → "The crowd is the bid right now."
 - T+2 → "The headline already happened. That's the end, not the start."
+- FLAGSHIP / HOLD → "This is the book. A red day is not a sell. I don't hop."
 
 ## What retail does next
 
@@ -76,7 +79,8 @@ One sentence in the rundown. What will the crowd do in the next 6–24h, and do 
 | T-1 | Smart wallets are already here. Retail follows the leftovers in 12–24h. |
 | T0 | They will ape the first FLASH candle this session. We wait for the second show or we fold. |
 | T+1 | They are the bid right now. Someone is exiting into them. |
-| T+2 | They think the listing/headline is the start. It is the end. Trim or fold. |
+| T+2 | They think the listing/headline is the start. It is the end — **on a flip**. Not on the book. |
+| FLAGSHIP | They will sell the only name that matters because a day went red, then hop. That is how they never keep a position. |
 
 Fail the run if a PLAY has no **Seat** and no **Retail next**.
 
@@ -87,7 +91,7 @@ Fail the run if a PLAY has no **Seat** and no **Retail next**.
 | HOOPLA | T+1 | OOP | They already chased the morning FLASH. Evening LP ~$4 is the river. |
 | COBRA | T+1 | OOP | They will treat 99% "buyers" as demand. That bid is the farm's exit. |
 | DOGO | T+2 | OOP | They will buy it because CoinGecko lists DogBull. The tape is wash. |
-| CASHCAT | T+2 | OOP | They still think the Aug 6 listing is a reason to add. Winners are distributing. |
+| CASHCAT | T-1 | IN (HOLD) | They will sell the book on a red day and hop. I don't. |
 | XST | T+1 | OOP | TikTok will keep sending L0 into a clustered float. Organic-looking tape is the camouflage. |
 | STONKBROKER | T-1 | IN | They will discover the NFT/stock-token story after the tape already looks two-sided. MES not ready — sit, don't chase. |
 | FRONG (Aug 13) | T-1 | IN | They will show up when pools.trade lore hits more timelines. Ladder was already there. |

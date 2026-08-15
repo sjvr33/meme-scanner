@@ -1,11 +1,12 @@
 {
   "CASHCAT": {
-    "public_label": "CLIMAX",
-    "public": "Robinhood listed it in the app on Aug 6. That run already happened. https://coinsprobe.com/robinhood-lists-cashcat-memecoin-jumps-sharply-on-official-announcement/",
-    "thesis": "The chain's flagship cat already got the app listing. Tonight the flow can still look two-sided while mid-size money sells into a story everyone knows.",
-    "opponent": "Early winners distributing into people who still think the listing is news.",
+    "public_label": "FLAGSHIP",
+    "horizon": "hold",
+    "public": "Robinhood listed it in the app on Aug 6. That spike is priced. The name is still the flagship. https://coinsprobe.com/robinhood-lists-cashcat-memecoin-jumps-sharply-on-official-announcement/",
+    "thesis": "This is the chain's cat — the book, not a flip. The listing was a day not to chase. A red day is not a sell. I hold it and I do not hop.",
+    "opponent": "Tourists sell the retrace. That is noise on a hold, not a thesis change.",
     "opponent_class": "winners_distributing",
-    "kill": "another heavy net-sell day shows up.",
+    "kill": "I only sell if this starts printing like a farm or the pool dies.",
     "age_days": 40
   },
   "XST": {

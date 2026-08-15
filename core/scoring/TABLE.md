@@ -26,15 +26,16 @@ Memecoins are **coordination + exit-liquidity** games:
 5. **Opponent model** — One sentence: who is selling to whom?
 6. **Conviction 0–4** — integrity + ladder + story + opponent. This is the hand, not the RX number.
 7. **AHEAD** — clock T-2…T+2, seat IN/BLINDS/OOP, and **Retail next** (what level-0 does in 6–24h). TAKE only in position.
-8. **Verdict** — TAKE / WATCH / FADE only. No mushy "interesting."
+8. **Verdict** — HOLD / TAKE / WATCH / FADE. Name the book first. No mushy "interesting."
 
 ## Verdict definitions
 
 | Verdict | Meaning |
 |---------|---------|
-| **TAKE** | Asymmetric: on-chain ignition + narrative not yet fully priced / not climax. Thin edge you would press small. |
+| **HOLD** | The book (`book.json`). Flagship, CLEAN tape. A listing retrace or a red day is not a sell. Looks are satellites — never sell the book to chase one. |
+| **TAKE** | Asymmetric *new* look: on-chain ignition + narrative not yet fully priced. Thin size. Does not replace a HOLD. |
 | **WATCH** | Missing one piece (MES lag, RX warming, narrative unclear, same-day flash needs next print). Do not chase. |
-| **FADE** | High attention / high vol, weak absorption, climax net-sell, bundle/wash integrity fail, or narrative is exit liquidity theater. Fold. |
+| **FADE** | High attention / high vol, weak absorption, climax net-sell on a *flip*, bundle/wash integrity fail, or narrative is exit liquidity theater. Fold. |
 
 Research only — not financial advice. "TAKE" means research priority, not a buy order.
 
