@@ -33,7 +33,7 @@ That is **level 0**. They treat the board as the hand.
 |-------|--------|---------|
 | **L0** retail | Green candle = buy | HOOPLA morning, CASHCAT listing hour, TOAD volume |
 | **L1** naive fade | All volume is distribution | Misses CASHCAT Aug 3–5 (the real hand *before* the listing) |
-| **L2** this scanner | Fade L0 at T+1/T+2; press L0's *future* bid at T-2/T-1 if CLEAN | Farms that fake a quiet ladder |
+| **L2** this scanner | Don't chase L0 fireworks; press future retail bid on *new* CLEAN names; **hold the book** | Farms that fake a quiet ladder, or hopping the book |
 | **L3** farm | Fake T-2: FLASH + silence + 99% net-buy wallets (HOOPLA) | INTEGRITY ceilings |
 
 If you only fade volume, you are L1. If you only chase FLASH, you are L0 with a terminal. L2 is: **be where retail will be, before they know the name — or be the one selling when they show up.**

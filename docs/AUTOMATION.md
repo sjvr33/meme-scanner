@@ -18,10 +18,17 @@ Do this once in Cursor Automations UI (prefill opens via agent or paste JSON):
 3. **Slack** = your DM or `#meme-scanner` (required — prefill cannot pick the channel)
 4. **Memories** = on
 5. **Cron** = `0 6 * * *` (08:00 SAST)
-6. **Save** → **Run once** manually → confirm Slack is a **Table Read** (TABLE / PLAYS / PASSES), not a score spreadsheet
-7. Enable Slack mobile notifications if you want push
+6. **Save** → **Run once** manually → confirm Slack is a **trader rundown** (I'd hold / I'd look / I'd pass), not a score spreadsheet
+7. After pulling `main`, re-save this prefill so the live automation matches the repo
+8. Enable Slack mobile notifications if you want push
 
-Quality bar for a good run: each PLAY has On-chain + Narrative + Opponent + Kill + TAKE|WATCH. See `core/scoring/TABLE.md`.
+Quality bar for a good run:
+- CASHCAT is **I'd hold this — I'm not hopping** if the tape is still CLEAN
+- Farms / washes are **I'd pass**
+- Looks are satellites — the book is not sold to fund them
+- English only. See `core/scoring/EDGE.md` + `core/scoring/TABLE.md`.
+
+Gate: `python3 scripts/check_vision.py`
 
 If an old automation named `RH Meme Scanner — Daily Digest` or `RH Meme Scanner — Deep Analyst` still exists in Cursor, **delete it** — those point at the retired `rh-meme-scanner` repo / old prompts.
 
@@ -34,17 +41,16 @@ If an old automation named `RH Meme Scanner — Daily Digest` or `RH Meme Scanne
 
 Config source of truth: `chains/<chain>/config/query-ids.json`
 
-## Alpha layers (v2.4)
+## Alpha layers (v2.7)
 
-- **INTEGRITY** — bundle / wash veto on Q-FLOW (`core/scoring/INTEGRITY.md`)
+- **BOOK** — CASHCAT is the hold (`chains/robinhood/config/book.json`)
+- **INTEGRITY** — bundle / wash veto (`core/scoring/INTEGRITY.md`)
 - **Q-REFLEX** — multi-day reloads (`core/scoring/REFLEX.md`)
-- **Q-FLASH** — same-day launches (`core/scoring/FLASH.md`); age ≤1d needs a second session
+- **Q-FLASH** — same-day launches (`core/scoring/FLASH.md`); age ≤1d needs a second session (not a book-sell)
 - **Q-COHORT** — winner-wallet confirmation (RH)
-- **TABLE** — narrative/web congruence + TAKE/WATCH/FADE voice (`core/scoring/TABLE.md`)
-- **THESIS** — English decoder + DexScreener/web + conviction 0–4 (`core/scoring/THESIS.md`)
-- **AHEAD** — information clock + seat + Retail next (`core/scoring/AHEAD.md`)
+- **THESIS + AHEAD + TABLE** — English rundown, seat, hold / look / watch / pass
 
-HIGH CONVICTION paths in `core/scoring/FLASH.md`. Narrative never upgrades a failed on-chain gate.
+Narrative never upgrades a failed on-chain gate. A red day never sells the book.
 
 ## Optional: deep dive
 

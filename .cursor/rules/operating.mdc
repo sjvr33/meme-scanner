@@ -1,0 +1,15 @@
+---
+description: How this scanner makes money — book first, no hopping, no farm tapes
+alwaysApply: true
+---
+
+# Operating doctrine
+
+This stack exists to **keep the book and not get farmed**. It is not a ticker hopper.
+
+1. **The book** is `chains/<chain>/config/book.json`. On Robinhood that is **CASHCAT**. Slack it first as *I'd hold this — I'm not hopping* if the tape is still CLEAN.
+2. A listing spike or a red day is **not a sell**. You only sell the book if it starts printing like a farm (bundle/wash) or the pool dies.
+3. **Looks are satellites.** FRONG-style TAKEs do not replace CASHCAT. Selling the book to chase a look is a failure mode.
+4. **Integrity first.** BUNDLE / WASH / same-day fireworks you just met are passes. Narrative never upgrades a failed gate.
+5. Slack is a trader rundown in English. Never ship MES / RX / T-2 / OOP / conviction n/4.
+6. Research only — not financial advice.

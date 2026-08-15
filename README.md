@@ -1,21 +1,17 @@
 # meme-scanner
 
-Multi-chain meme scanner with **Reflex Score (RX)** + **FLASH** (hourly) + **COHORT** (winner wallets) — plus pluggable connectors.
+Research scanner for Robinhood L2 + Solana memes. **Not financial advice.**
 
-**Chains:** Robinhood L2 · Solana  
-**Delivery:** Cursor Automation → Dune MCP → Slack digest  
-**Alpha:** Dune hole cards · public board · AHEAD (sit in front of retail, not next to them)  
-**Future:** Coinglass (perp OI/funding modifiers) · pump.fun graduation
+**How we make money:** hold the book (CASHCAT), don't get farmed, take satellite looks only. Hopping names is how this stack loses.
 
-## Why this exists
+**Delivery:** one Cursor Automation → Dune → Slack at 08:00 SAST  
+**Stack:** INTEGRITY → RX / FLASH / COHORT → THESIS / AHEAD → HOLD / look / watch / pass  
+**Future:** Coinglass modifiers · pump.fun graduation
 
-Volume scanners scream loudest on dump days. CASHCAT's Aug 6 listing climax was $107M vol / net−$1.18M. The **real setup** was Aug 3–5 — when Reflex Score hit 82→83→100 *before* the blowup. Daily RX still missed flash launches like GME — **Q-FLASH** catches those hourly. **Q-COHORT** confirms when prior meme winners rotate into the next name.
-
-See [core/scoring/AHEAD.md](core/scoring/AHEAD.md) · [core/scoring/THESIS.md](core/scoring/THESIS.md) · [core/scoring/INTEGRITY.md](core/scoring/INTEGRITY.md) · [docs/BACKTESTS.md](docs/BACKTESTS.md).
+Doctrine: [core/scoring/EDGE.md](core/scoring/EDGE.md) · book: [chains/robinhood/config/book.json](chains/robinhood/config/book.json)
 
 ```bash
-python3 scripts/replay_integrity.py
-python3 scripts/replay_thesis.py
+python3 scripts/check_vision.py
 python3 scripts/run_board.py core/scoring/fixtures/live_flow.json
 ```
 
@@ -30,11 +26,11 @@ cd meme-scanner
 ## Structure
 
 ```
-core/           Manifest, MES scoring, connector registry
-chains/         Per-chain Dune SQL + config (robinhood, solana)
-prompts/        Automation agent instructions
-automation/     Cursor Automation prefill JSON
-docs/           Architecture + setup guides
+core/           Manifest, scoring, operating doctrine (EDGE.md)
+chains/         Dune SQL + query IDs + book.json + watchlist
+prompts/        Daily automation instructions
+automation/     Cursor Automation prefill
+docs/           Architecture + setup
 ```
 
 ## Dune queries

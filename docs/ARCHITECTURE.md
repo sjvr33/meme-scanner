@@ -10,7 +10,7 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
                                    │
                     ┌──────────────▼──────────────────────┐
                     │           core/manifest.json         │
-                    │  MES × RX × FLASH × COHORT × INTEGRITY│
+                    │  BOOK + INTEGRITY + RX/FLASH/COHORT   │
                     └──────────────┬──────────────────────┘
            ┌───────────────────────┼───────────────────────┐
            │                       │                       │
@@ -35,7 +35,7 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 | `core/scoring/` | MES, REFLEX, FLASH, INTEGRITY, THESIS, EDGE, TABLE |
 | `core/connectors/` | Pluggable data source configs |
 | `chains/<id>/dune/` | Chain-specific SQL |
-| `chains/<id>/config/` | Query IDs, watchlist |
+| `chains/<id>/config/` | Query IDs, watchlist, **book.json** (holds) |
 | `prompts/orchestrator-multichain.md` | Daily automation prompt (only prompt) |
 | `automation/scanner-multichain-prefill.json` | Cursor Automation prefill (only prefill) |
 
@@ -46,11 +46,11 @@ Multi-chain meme scanner with pluggable connectors. **One** daily Cursor Automat
 3. **Reflex (RX)** — microstructure (reload path); absorp+addon=0 is a SUSPECT tell
 4. **Flash** — hourly (same-day launch path)
 5. **Cohort** — winner-wallet overlap (RH confirmation)
-6. **Watch** — pinned + carry-forward
-7. **Thesis + public sources** — DexScreener/web by contract; English decoder; conviction 0–4 (THESIS.md)
-8. **AHEAD** — information clock + seat + Retail next (sit in front of retail)
+6. **Book + watch** — `book.json` holds are permanent; watchlist is for looks
+7. **Thesis + public sources** — DexScreener/web by contract; English decoder (THESIS.md)
+8. **AHEAD** — seat on *new* names; the book is HOLD, not T+2
 9. **Table read** — cross-chain regime in prose
-9. **Deliver** — Slack TAKE/WATCH/FADE + Memories
+10. **Deliver** — Slack HOLD / look / watch / pass + Memories (never drop the book)
 
 ## Adding a new chain
 

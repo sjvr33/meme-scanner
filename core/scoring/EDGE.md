@@ -2,9 +2,20 @@
 
 Research framework. Not financial advice.
 
+## How we make money
+
+1. **Hold the book.** On Robinhood that is CASHCAT (`chains/robinhood/config/book.json`). The Aug 3–5 reload was the add. The Aug 6 listing was a day not to chase size. Neither is a day to sell. We make money by still being in the only name that matters when hoppers have rotated three times.
+2. **Don't get farmed.** Bundle / wash / same-day fireworks we just met are passes. HOOPLA-shaped tape is how accounts die.
+3. **Satellite looks only.** A FRONG-style look is extra. It never replaces the book. Selling CASHCAT to chase FLASH is how this stack loses.
+4. **Sit in front of retail on *new* names.** Dune is hole cards. DexScreener/web is the board. We look when the crowd is not yet the bid. We do not clock the book as "listing = over."
+
+If a daily Slack fades CASHCAT because a day went red, the run failed — even if every farm was correctly passed.
+
 ## The core insight (from CASHCAT)
 
 **Reactivation beats novelty.** The Aug 6 listing blowup was visible Aug 3–5 on-chain — vol 4.7×, net-buy streak, holder acceleration — while the token was already 4 weeks old. Most scanners only watch new deploys and miss the highest-conviction leg.
+
+**Holding beats hopping.** Catching Aug 3–5 and then selling the retrace is the same as never catching it.
 
 This scanner is built around that asymmetry.
 
@@ -90,16 +101,17 @@ After scores, **translate then argue with the internet** (`THESIS.md`).
 
 - Conviction is 0–4 independent legs (integrity, ladder, story, opponent) — **not** the RX number
 - DexScreener + web search the **contract**. Silence / climax / rug-warning are findings
+- **FLAGSHIP** (the book) is HOLD if CLEAN — not CLIMAX
 - Narrative **confirms or downgrades** — never upgrades a failed gate to TAKE
-- Slack is Thesis / Tape / Public / Opponent — not a scoreboard
+- Slack is a trader rundown: hold / look / watch / pass — not a scoreboard
 
 ### Layer 7 — AHEAD (forward seat) ★ WHY WE BEAT RETAIL
 
 Dune = hole cards. Public = board. **AHEAD** is the seat: T-2…T+2 clock + level-k + "Retail next".
 
-Retail is level 0 (green candle / headline / first FLASH). L1 fades all volume and misses CASHCAT Aug 3–5. L2 sits at T-2/T-1 and fades T+1/T+2. L3 farms fake T-2 — INTEGRITY catches them.
+Retail is level 0 (green candle / headline / first FLASH). L1 fades all volume and misses CASHCAT Aug 3–5. L2 sits at T-2/T-1 on *new* names and does not chase T+1/T+2 fireworks. L3 farms fake T-2 — INTEGRITY catches them.
 
-TAKE requires IN POSITION. CASHCAT listing hour and HOOPLA morning FLASH are the same mistake: playing next to retail instead of in front of them. See `core/scoring/AHEAD.md`.
+TAKE (a look) requires IN POSITION. HOLD (the book) does not get clocked as T+2 just because a listing already printed. Chasing CASHCAT's listing hour and chasing HOOPLA's morning FLASH are the same *add* mistake. Selling the book afterward is a second, dumber mistake. See `core/scoring/AHEAD.md`.
 
 ## What we deliberately ignore
 
@@ -116,10 +128,14 @@ TAKE requires IN POSITION. CASHCAT listing hour and HOOPLA morning FLASH are the
 - Higher min volume threshold ($250k vs $50k RH) — Solana is noisier
 - Exclude stables/wrapped (WSOL, USDC, cbBTC, USD1, WETH)
 
-## Success metrics ( tune weekly )
+## Success metrics
 
 | Metric | Target |
 |--------|--------|
-| False positive rate (MES≥75, flat 7d) | <40% |
-| Reactivation catches before 2× move | >50% |
-| Digest delivery reliability | 100% Slack posts |
+| Still in the book | CASHCAT is HOLD every clean day — never faded for a red tape or a listing retrace |
+| Farm rejection | HOOPLA / wash / 99% net-buy prints are FADE the same day they appear |
+| No hop | Slack never sells the book to fund a look |
+| Looks | ≤3, only CLEAN + early/product + crowd not yet the bid |
+| Digest | 100% Slack posts, English rundown, `python3 scripts/check_vision.py` PASS |
+
+Gate: `python3 scripts/check_vision.py`
